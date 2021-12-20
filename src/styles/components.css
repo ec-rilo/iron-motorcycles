@@ -1,0 +1,29 @@
+/* DEFAULT */
+
+/* NAVBAR */
+
+nav {
+  background-color: var(--primary-clr);
+  color: var(--secondary-clr);
+}
+
+.img-small {
+  height: 40px;
+  width: 40px;
+}
+
+.logo-small {
+  font-family: var(--secondary-fnt);
+  font-size: 1.5rem;
+  padding: 20px;
+  text-align: center;
+}
+
+.nav-items {
+  display: flex;
+  padding: 10px 30px;
+  align-items: center;
+  font-family: var(--primary-fnt);
+  font-size: 1rem;
+  justify-content: space-evenly;
+}
