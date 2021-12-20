@@ -1,45 +1,93 @@
-/* DEFAULT */
+/* regular mobile */
+@media (max-width: 800px) {
+  /* NAVBAR */
 
-/* NAVBAR */
+  nav {
+    background-color: var(--primary-clr);
+    color: var(--secondary-clr);
+  }
 
-nav {
-  background-color: var(--primary-clr);
-  color: var(--secondary-clr);
+  .img-small {
+    height: 40px;
+    width: 40px;
+  }
+
+  .logo-small {
+    font-family: var(--secondary-fnt);
+    font-size: 1.5rem;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .nav-items {
+    display: flex;
+    padding: 10px 30px;
+    align-items: center;
+    font-family: var(--primary-fnt);
+    font-size: 1rem;
+    justify-content: space-evenly;
+  }
+
+  /* Shop Now Button */
+
+  .shop-now-btn {
+    font-family: var(--tertiary-fnt);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-clr);
+    color: var(--primary-clr);
+    width: 150px;
+    height: 50px;
+    margin-left: 65px;
+    margin-top: 30px;
+  }
 }
 
-.img-small {
-  height: 40px;
-  width: 40px;
-}
+/* x-small mobile */
+@media (max-width: 320px) {
+  /* NAVBAR */
 
-.logo-small {
-  font-family: var(--secondary-fnt);
-  font-size: 1.5rem;
-  padding: 20px;
-  text-align: center;
-}
+  nav {
+    background-color: var(--primary-clr);
+    color: var(--secondary-clr);
+  }
 
-.nav-items {
-  display: flex;
-  padding: 10px 30px;
-  align-items: center;
-  font-family: var(--primary-fnt);
-  font-size: 1rem;
-  justify-content: space-evenly;
-}
+  .img-small {
+    height: 35px;
+    width: 35px;
+  }
 
-/* Shop Now Button */
+  .logo-small {
+    font-family: var(--secondary-fnt);
+    font-size: 1.3rem;
+    padding: 20px;
+    text-align: center;
+  }
 
-.shop-now-btn {
-  font-family: var(--tertiary-fnt);
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--secondary-clr);
-  color: var(--primary-clr);
-  width: 150px;
-  height: 50px;
-  margin-left: 65px;
-  margin-top: 30px;
+  .nav-items {
+    display: flex;
+    padding: 10px 30px;
+    align-items: center;
+    font-family: var(--primary-fnt);
+    font-size: 1rem;
+    justify-content: space-evenly;
+  }
+
+  /* Shop Now Button */
+
+  .shop-now-btn {
+    font-family: var(--tertiary-fnt);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-clr);
+    color: var(--primary-clr);
+    width: 150px;
+    height: 50px;
+    margin-left: 65px;
+    margin-top: 30px;
+  }
 }
