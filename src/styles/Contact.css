@@ -1,3 +1,40 @@
+/* regular mobile */
+@media (max-width: 750px) {
+  .contact-content-container {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 20px;
+    font-family: var(--primary-fnt);
+    font-size: 1rem;
+    gap: 50px;
+  }
+
+  .contact-content-title {
+    font-family: var(--tertiary-fnt);
+    font-size: 2rem;
+  }
+
+  .contact-content-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-social-media-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .social-media-content {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+    text-decoration: none;
+    color: var(--primary-clr);
+  }
+}
+
 /* x-small mobile */
 @media (max-width: 320px) {
   .contact-content-container {
