@@ -63,7 +63,8 @@
     align-items: center;
     font-family: var(--primary-fnt);
     font-size: 1rem;
-    justify-content: space-evenly;
+    gap: 30px;
+    justify-content: center;
   }
 
   /* Shop Now Button */
@@ -110,7 +111,8 @@
     align-items: center;
     font-family: var(--primary-fnt);
     font-size: 1rem;
-    justify-content: space-evenly;
+    gap: 15px;
+    justify-content: center;
   }
 
   /* Shop Now Button */
