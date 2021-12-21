@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import RouteSwitch from './RouteSwitch';
 import './styles/reset.css';
 import './styles/Home.css';
+import './styles/Contact.css';
 import './styles/components.css';
 import './styles/index.css';
 
