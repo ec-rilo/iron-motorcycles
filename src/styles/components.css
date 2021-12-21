@@ -52,6 +52,24 @@
     margin-top: 60px;
     font-size: 1.5rem;
   }
+
+  .page-banner {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-family: var(--tertiary-fnt);
+    color: var(--secondary-clr);
+    background-position: center top;
+    text-transform: uppercase;
+  }
+
+  .social-media-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+  }
 }
 
 /* Tablets and larger phones */
