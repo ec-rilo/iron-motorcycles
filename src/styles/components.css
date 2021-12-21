@@ -35,6 +35,23 @@
     font-size: 1rem;
     gap: 20px;
   }
+
+  /* Shop Now Button */
+
+  .shop-now-btn {
+    font-family: var(--tertiary-fnt);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-clr);
+    color: var(--primary-clr);
+    width: 200px;
+    height: 70px;
+    margin-left: 95px;
+    margin-top: 60px;
+    font-size: 1.5rem;
+  }
 }
 
 /* Tablets and larger phones */
