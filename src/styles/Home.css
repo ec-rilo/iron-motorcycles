@@ -19,7 +19,7 @@
   .home-call-to-action {
     font-family: var(--tertiary-fnt);
     font-size: 5rem;
-    border-left: 50px solid var(--company-color);
+    border-left: 50px solid var(--company-clr);
     padding-left: 50px;
     text-transform: uppercase;
     line-height: 1.5;
@@ -75,7 +75,7 @@
   .home-call-to-action {
     font-family: var(--tertiary-fnt);
     font-size: 4rem;
-    border-left: 50px solid var(--company-color);
+    border-left: 50px solid var(--company-clr);
     padding-left: 30px;
     text-transform: uppercase;
     line-height: 1.5;
@@ -107,7 +107,7 @@
   .home-call-to-action {
     font-family: var(--tertiary-fnt);
     font-size: 2.3rem;
-    border-left: 35px solid var(--company-color);
+    border-left: 35px solid var(--company-clr);
     padding-left: 30px;
     text-transform: uppercase;
     line-height: 1.5;
@@ -140,7 +140,7 @@
   .home-call-to-action {
     font-family: var(--tertiary-fnt);
     font-size: 2rem;
-    border-left: 35px solid var(--company-color);
+    border-left: 35px solid var(--company-clr);
     padding-left: 30px;
     text-transform: uppercase;
     line-height: 1.5;
