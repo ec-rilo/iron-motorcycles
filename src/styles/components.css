@@ -1,10 +1,48 @@
+/* Tablets and larger phones */
+@media (max-width: 1400px) {
+  /* NAVBAR */
+
+  nav {
+    display: flex;
+    background-color: var(--primary-clr);
+    color: var(--secondary-clr);
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: space-between;
+  }
+
+  .img-small {
+    height: 40px;
+    width: 40px;
+  }
+
+  .logo-small {
+    font-family: var(--secondary-fnt);
+    font-size: 1.5rem;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .nav-items {
+    display: flex;
+    padding: 10px 30px;
+    align-items: center;
+    font-family: var(--primary-fnt);
+    font-size: 1rem;
+    gap: 20px;
+  }
+}
+
 /* regular mobile */
 @media (max-width: 800px) {
   /* NAVBAR */
 
   nav {
+    display: block;
     background-color: var(--primary-clr);
     color: var(--secondary-clr);
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .img-small {
