@@ -204,4 +204,21 @@
     margin-left: 65px;
     margin-top: 30px;
   }
+
+  .page-banner {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-family: var(--tertiary-fnt);
+    color: var(--secondary-clr);
+    background-position: center top;
+  }
+
+  .social-media-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+  }
 }
