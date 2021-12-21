@@ -73,7 +73,7 @@
 }
 
 /* regular mobile */
-@media (max-width: 800px) {
+@media (max-width: 750px) {
   /* NAVBAR */
 
   nav {
