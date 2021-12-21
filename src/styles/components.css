@@ -214,6 +214,7 @@
     font-family: var(--tertiary-fnt);
     color: var(--secondary-clr);
     background-position: center top;
+    text-transform: uppercase;
   }
 
   .social-media-icon {
