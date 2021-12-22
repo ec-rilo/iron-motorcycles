@@ -264,6 +264,108 @@
     margin: 20px auto;
     font-size: 0.9rem;
   }
+
+  /* BikeDetail.js */
+  .bike-detail-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bike-detail-upper-content {
+    position: relative;
+    background-color: black;
+    height: 180px;
+  }
+
+  .bike-detail-info {
+    color: var(--secondary-clr);
+    font-family: var(--secondary-fnt);
+    padding: 20px 0 0 20px;
+  }
+
+  .bike-detail-category-name {
+    font-size: 1rem;
+  }
+
+  .bike-detail-title {
+    color: var(--company-clr);
+    font-size: 2rem;
+  }
+
+  .bike-detail-img {
+    display: block;
+    margin: auto;
+    position: absolute;
+    height: 150px;
+    object-fit: contain;
+    left: 0;
+    right: 0;
+    bottom: -55px;
+  }
+
+  .bike-detail-lower-content {
+    position: relative;
+    top: 100px;
+    background-color: var(--primary-clr);
+  }
+
+  .bike-detail-lower-content .bike-detail-text {
+    color: var(--secondary-clr);
+    font-family: var(--primary-fnt);
+    text-align: center;
+    margin: 40px 20px;
+  }
+
+  .bike-detail-lower-content .bike-detail-price {
+    display: block;
+    color: var(--company-clr);
+    margin: 20px;
+    font-family: var(--secondary-fnt);
+  }
+
+  .bike-detail-lower-content .separation-line {
+    height: 2px;
+    background-color: var(--secondary-clr);
+    margin: auto 20px;
+  }
+
+  .bike-detail-specs-content {
+    color: var(--secondary-clr);
+    margin: 30px 20px;
+    line-height: 1.5;
+  }
+
+  .bike-detail-specs-title {
+    color: var(--company-clr);
+    font-family: var(--tertiary-fnt);
+    font-size: 1.2rem;
+  }
+
+  .bike-detail-specs-text {
+    font-family: var(--primary-fnt);
+  }
+
+  /* BikeDetail.js */
+
+  .add-to-cart-btn {
+    position: absolute;
+    display: flex;
+    top: -20px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-clr);
+    text-transform: uppercase;
+    font-family: var(--tertiary-fnt);
+    background-color: var(--company-clr);
+    width: 150px;
+    height: 40px;
+    margin: auto;
+    font-size: 0.9rem;
+  }
 }
 
 /* x-small mobile */
