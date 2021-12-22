@@ -11,6 +11,7 @@ import roadglidespecialImg from '../images/bikes/grand-american-touring/road-gli
 const bikeData = (() => {
   const trike = [
     {
+      type: 'Trike',
       name: 'Freewheeler®',
       price: '27,999',
       description:
@@ -21,6 +22,7 @@ const bikeData = (() => {
       image: freewheelerImg,
     },
     {
+      type: 'Trike',
       name: 'Tri Glide® Ultra',
       price: '34,999',
       description:
@@ -31,6 +33,7 @@ const bikeData = (() => {
       image: triglideultraImg,
     },
     {
+      type: 'Trike',
       name: 'CVO™ Tri Glide',
       price: '48,999',
       description:
@@ -44,6 +47,7 @@ const bikeData = (() => {
 
   const cruisers = [
     {
+      type: 'Cruiser',
       name: 'Iron 883™',
       price: '9,749',
       description: 'Blacked-out and stripped-down with a legendary profile.',
@@ -53,6 +57,7 @@ const bikeData = (() => {
       image: iron883Img,
     },
     {
+      type: 'Cruiser',
       name: 'Iron 1200™',
       price: '10,249',
       description:
@@ -63,6 +68,7 @@ const bikeData = (() => {
       image: iron1200Img,
     },
     {
+      type: 'Cruiser',
       name: 'Forty-Eight™',
       price: '11,549',
       description:
@@ -76,6 +82,7 @@ const bikeData = (() => {
 
   const gat = [
     {
+      type: 'Grand American Touring',
       name: 'Road King®',
       price: '19,499',
       description:
@@ -86,6 +93,7 @@ const bikeData = (() => {
       image: roadkingImg,
     },
     {
+      type: 'Grand American Touring',
       name: 'Road King® Special',
       price: '22,999',
       description:
@@ -96,6 +104,7 @@ const bikeData = (() => {
       image: roadkingspecialImg,
     },
     {
+      type: 'Grand American Touring',
       name: 'Road Glide® Special',
       price: '26,699',
       description:
