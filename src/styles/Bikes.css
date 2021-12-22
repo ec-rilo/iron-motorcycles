@@ -27,12 +27,18 @@
     gap: 20px;
     font-family: var(--tertiary-fnt);
     height: 80px;
-    margin: auto 20px;
+    margin: auto;
     color: #626262;
+    justify-content: initial;
   }
 
   .bike-chooser-container > label {
     width: 100px;
+  }
+
+  .slider-container {
+    border-bottom: 5px solid #ccc;
+    margin: auto 20px;
   }
 
   .slider {
@@ -41,7 +47,7 @@
     height: 5px;
     display: block;
     background: #ccc;
-    bottom: 0;
+    bottom: -5px;
     border-radius: 5px;
   }
 
