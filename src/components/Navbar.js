@@ -5,7 +5,12 @@ const Navbar = () => {
   return (
     <div className="container">
       <nav>
-        <p className="logo-small">IRON MOTORCYCLES</p>
+        <Link
+          style={{ textDecoration: 'none', color: 'var(--secondary-clr)' }}
+          to="/"
+        >
+          <p className="logo-small">IRON MOTORCYCLES</p>
+        </Link>
         <ul className="nav-items">
           <li>
             <Link
