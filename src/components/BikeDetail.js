@@ -1,0 +1,48 @@
+import Navbar from './Navbar';
+import bikeImg from '../images/bikes/cruisers/iron-883.png';
+import AddToCartBtn from './buttons/AddToCartBtn';
+import { useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import uniqid from 'uniqid';
+
+const BikeDetail = () => {
+  const location = useLocation();
+  const { bikeData } = location.state;
+  const [bikeSpecs] = useState([
+    { type: 'ENGINE', data: bikeData.engine },
+    { type: 'ENGINE TORQUE', data: bikeData['engine torque'] },
+    { type: 'FUEL ECONOMY', data: bikeData['fuel economy'] },
+  ]);
+  return (
+    <div className="bike-detail-container">
+      <Navbar />
+      <div className="bike-detail-upper-content">
+        <div className="bike-detail-info">
+          <p className="bike-detail-category-name">{bikeData.type}</p>
+          <p className="bike-detail-title">{bikeData.name}</p>
+        </div>
+        <img className="bike-detail-img" src={bikeData.image} alt="asef" />
+      </div>
+      <div className="bike-detail-lower-content">
+        <AddToCartBtn />
+        <p className="bike-detail-text">
+          {bikeData.description}
+          <br />
+          <span className="bike-detail-price">{`$${bikeData.price}`}</span>
+        </p>
+        <div className="separation-line"></div>
+        <div className="bike-detail-specs-container">
+          {bikeSpecs.map((item) => {
+            return (
+              <div key={uniqid()} className="bike-detail-specs-content">
+                <p className="bike-detail-specs-title">{item.type}</p>
+                <p className="bike-detail-specs-text">{item.data}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+export default BikeDetail;
