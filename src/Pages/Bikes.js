@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import uniqid from 'uniqid';
 import bikeData from '../data/bike-data';
 import ViewCollectionBtn from '../components/buttons/ViewCollectionBtn';
+import { useMediaQuery } from 'react-responsive';
 
 const Bikes = () => {
   const [checkboxes, setCheckboxes] = useState([
@@ -12,11 +13,11 @@ const Bikes = () => {
   ]);
 
   const [bikesArr, setBikesArr] = useState([
-    { type: 'trike', data: bikeData.trike[0], class: 'bike-not-selected' },
-    { type: 'cruiser', data: bikeData.cruisers[0], class: 'bike-selected' },
+    { type: 'trike', data: bikeData.trike, class: 'bike-not-selected' },
+    { type: 'cruiser', data: bikeData.cruisers, class: 'bike-selected' },
     {
       type: 'grand american touring',
-      data: bikeData.gat[0],
+      data: bikeData.gat,
       class: 'bike-not-selected',
     },
   ]);
@@ -78,6 +79,8 @@ const Bikes = () => {
     });
   };
 
+  const isSmallScreen = useMediaQuery({ maxWidth: 1400 });
+
   return (
     <div className="bikes-page">
       <Navbar />
@@ -111,24 +114,75 @@ const Bikes = () => {
         </div>
         <div className="bike-wheel">
           {bikesArr.map((item, index) => {
-            return (
-              <div
-                className={`bike-wheel-content ${item.class}`}
-                key={uniqid()}
-              >
-                <img
-                  src={item.data.image}
-                  className="bike-wheel-img"
-                  alt="placeholder"
-                />
-                <div className="bike-wheel-text-content">
-                  <p className="bike-wheel-title">{item.data.name}</p>
-                  <p className="bike-wheel-text">
-                    STARTING AT ${item.data.price}
-                  </p>
+            if (isSmallScreen) {
+              return (
+                <div
+                  className={`bike-wheel-content ${item.class}`}
+                  key={uniqid()}
+                >
+                  <img
+                    src={item.data[0].image}
+                    className="bike-wheel-img"
+                    alt="placeholder"
+                  />
+                  <div className="bike-wheel-text-content">
+                    <p className="bike-wheel-title">{item.data[0].name}</p>
+                    <p className="bike-wheel-text">
+                      STARTING AT ${item.data[0].price}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            );
+              );
+            } else {
+              return (
+                <div
+                  className={`bike-wheel-content ${item.class}`}
+                  key={uniqid()}
+                >
+                  <div className="bike-wheel-item">
+                    <img
+                      src={item.data[0].image}
+                      className="bike-wheel-img"
+                      alt="placeholder"
+                    />
+                    <div className="bike-wheel-text-content">
+                      <p className="bike-wheel-title">{item.data[0].name}</p>
+                      <p className="bike-wheel-text">
+                        STARTING AT ${item.data[0].price}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bike-wheel-item">
+                    <img
+                      src={item.data[1].image}
+                      className="bike-wheel-img"
+                      alt="placeholder"
+                    />
+                    <div className="bike-wheel-text-content">
+                      <p className="bike-wheel-title">{item.data[1].name}</p>
+                      <p className="bike-wheel-text">
+                        STARTING AT ${item.data[1].price}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bike-wheel-item">
+                    <img
+                      src={item.data[2].image}
+                      className="bike-wheel-img"
+                      alt="placeholder"
+                    />
+                    <div className="bike-wheel-text-content">
+                      <p className="bike-wheel-title">{item.data[2].name}</p>
+                      <p className="bike-wheel-text">
+                        STARTING AT ${item.data[2].price}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
           })}
         </div>
         <ViewCollectionBtn />
