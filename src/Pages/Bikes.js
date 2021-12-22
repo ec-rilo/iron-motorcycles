@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import uniqid from 'uniqid';
 import bikeData from '../data/bike-data';
+import ViewCollectionBtn from '../components/buttons/ViewCollectionBtn';
 
 const Bikes = () => {
   const [checkboxes, setCheckboxes] = useState([
@@ -129,6 +130,7 @@ const Bikes = () => {
           })}
         </div>
       </div>
+      <ViewCollectionBtn />
     </div>
   );
 };
