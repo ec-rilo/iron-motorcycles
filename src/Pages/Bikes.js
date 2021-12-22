@@ -146,47 +146,37 @@ const Bikes = () => {
                   className={`bike-wheel-content ${item.class}`}
                   key={uniqid()}
                 >
-                  <div className="bike-wheel-item">
-                    <img
-                      src={item.data[0].image}
-                      className="bike-wheel-img"
-                      alt="placeholder"
-                    />
-                    <div className="bike-wheel-text-content">
-                      <p className="bike-wheel-title">{item.data[0].name}</p>
-                      <p className="bike-wheel-text">
-                        STARTING AT ${item.data[0].price}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="bike-wheel-item">
-                    <img
-                      src={item.data[1].image}
-                      className="bike-wheel-img"
-                      alt="placeholder"
-                    />
-                    <div className="bike-wheel-text-content">
-                      <p className="bike-wheel-title">{item.data[1].name}</p>
-                      <p className="bike-wheel-text">
-                        STARTING AT ${item.data[1].price}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="bike-wheel-item">
-                    <img
-                      src={item.data[2].image}
-                      className="bike-wheel-img"
-                      alt="placeholder"
-                    />
-                    <div className="bike-wheel-text-content">
-                      <p className="bike-wheel-title">{item.data[2].name}</p>
-                      <p className="bike-wheel-text">
-                        STARTING AT ${item.data[2].price}
-                      </p>
-                    </div>
-                  </div>
+                  {[...Array(3)].map((elem, idx) => {
+                    return (
+                      <Link
+                        key={uniqid()}
+                        to={`/bikes/${item.data[idx].name}`}
+                        state={{
+                          bikeData: item.data[idx],
+                        }}
+                        style={{
+                          color: 'var(--primary-clr)',
+                          textDecoration: 'none',
+                        }}
+                      >
+                        <div className="bike-wheel-item">
+                          <img
+                            src={item.data[idx].image}
+                            className="bike-wheel-img"
+                            alt="placeholder"
+                          />
+                          <div className="bike-wheel-text-content">
+                            <p className="bike-wheel-title">
+                              {item.data[idx].name}
+                            </p>
+                            <p className="bike-wheel-text">
+                              STARTING AT ${item.data[idx].price}
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+                    );
+                  })}
                 </div>
               );
             }
