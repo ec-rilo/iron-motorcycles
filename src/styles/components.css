@@ -76,6 +76,22 @@
     height: 30px;
     object-fit: cover;
   }
+
+  .view-collection-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-clr);
+    text-transform: uppercase;
+    font-family: var(--tertiary-fnt);
+    background-color: var(--company-clr);
+    width: 300px;
+    height: 60px;
+    margin: 100px auto;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
 }
 
 /* Tablets and larger phones */
