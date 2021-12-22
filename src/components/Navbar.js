@@ -15,11 +15,18 @@ const Navbar = () => {
               HOME
             </Link>
           </li>
-          <li>BIKES</li>
           <li>
             <Link
               style={{ textDecoration: 'none', color: 'var(--secondary-clr)' }}
-              to="contact"
+              to="/bikes"
+            >
+              BIKES
+            </Link>
+          </li>
+          <li>
+            <Link
+              style={{ textDecoration: 'none', color: 'var(--secondary-clr)' }}
+              to="/contact"
             >
               CONTACT
             </Link>
