@@ -131,8 +131,8 @@ const Bikes = () => {
             );
           })}
         </div>
+        <ViewCollectionBtn />
       </div>
-      <ViewCollectionBtn />
     </div>
   );
 };
