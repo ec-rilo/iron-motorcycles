@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ShopNowBtn from '../components/buttons/ShopNowBtn';
 import Navbar from '../components/Navbar';
 
@@ -13,7 +14,9 @@ const Home = () => {
               ready for an <br />
               adventure?
             </p>
-            <ShopNowBtn />
+            <Link style={{ textDecoration: 'none' }} to="/bikes">
+              <ShopNowBtn />
+            </Link>
           </div>
           <div className="home-aside-text-container">
             <p className="home-aside-text">
