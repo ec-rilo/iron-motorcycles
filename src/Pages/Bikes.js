@@ -4,6 +4,7 @@ import uniqid from 'uniqid';
 import bikeData from '../data/bike-data';
 import ViewCollectionBtn from '../components/buttons/ViewCollectionBtn';
 import { useMediaQuery } from 'react-responsive';
+import { Link } from 'react-router-dom';
 
 const Bikes = () => {
   const [checkboxes, setCheckboxes] = useState([
@@ -116,22 +117,28 @@ const Bikes = () => {
           {bikesArr.map((item, index) => {
             if (isSmallScreen) {
               return (
-                <div
-                  className={`bike-wheel-content ${item.class}`}
+                <Link
+                  style={{ color: 'var(--primary-clr)' }}
                   key={uniqid()}
+                  to={`/bikes/${item.data[0].name}`}
+                  state={{
+                    bikeData: item.data[0],
+                  }}
                 >
-                  <img
-                    src={item.data[0].image}
-                    className="bike-wheel-img"
-                    alt="placeholder"
-                  />
-                  <div className="bike-wheel-text-content">
-                    <p className="bike-wheel-title">{item.data[0].name}</p>
-                    <p className="bike-wheel-text">
-                      STARTING AT ${item.data[0].price}
-                    </p>
+                  <div className={`bike-wheel-content ${item.class}`}>
+                    <img
+                      src={item.data[0].image}
+                      className="bike-wheel-img"
+                      alt="placeholder"
+                    />
+                    <div className="bike-wheel-text-content">
+                      <p className="bike-wheel-title">{item.data[0].name}</p>
+                      <p className="bike-wheel-text">
+                        STARTING AT ${item.data[0].price}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               );
             } else {
               return (
