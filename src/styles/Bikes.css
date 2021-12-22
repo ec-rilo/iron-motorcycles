@@ -1,3 +1,156 @@
+@media (max-width: 750px) {
+  .bikes-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .bikes-content {
+    flex-grow: 1;
+    max-width: 2000px;
+  }
+
+  .bikes-title {
+    text-transform: uppercase;
+    font-family: var(--secondary-fnt);
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 30px auto;
+  }
+
+  .bike-chooser-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    font-family: var(--tertiary-fnt);
+    height: 80px;
+    margin: auto;
+    color: #626262;
+    /* new code below this line */
+    justify-content: space-between;
+    max-width: 500px;
+    /* New code above this line */
+  }
+
+  .bike-chooser-container > label {
+    width: 100px;
+  }
+
+  .slider-container {
+    border-bottom: 5px solid #ccc;
+    margin: auto 20px;
+  }
+
+  .slider {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    display: block;
+    background: #ccc;
+    border-radius: 5px;
+    bottom: -5px;
+  }
+
+  .slider .bar {
+    width: 100px;
+    height: 5px;
+    background: var(--company-clr);
+    border-radius: 5px;
+  }
+
+  .slide-toggle {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .bike-chooser-container label input span {
+    color: #626262;
+  }
+
+  .bike-chooser-container label #slide-item-1:checked ~ span {
+    color: var(--company-clr);
+  }
+
+  .bike-chooser-container label #slide-item-2:checked ~ span {
+    color: var(--company-clr);
+  }
+
+  .bike-chooser-container label #slide-item-3:checked ~ span {
+    color: var(--company-clr);
+  }
+
+  .first-selected {
+    margin-left: 0;
+    transform: translateX(0);
+  }
+
+  .second-selected {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .third-selected {
+    margin-left: 100%;
+    transform: translateX(-100%);
+  }
+
+  .slider .bar {
+    transition: all 500ms ease-in-out;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+  }
+
+  .bike-wheel {
+    /* new code below this line */
+    margin-top: 30px;
+    height: 250px;
+    /* new code above this line */
+  }
+
+  .bike-wheel-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .bike-wheel-img {
+    /* new code below this line */
+    height: 180px;
+    /* new code above this line */
+    object-fit: contain;
+  }
+
+  .bike-wheel-title {
+    text-align: center;
+    font-family: var(--tertiary-fnt);
+    font-size: 1.3rem;
+  }
+
+  .bike-wheel-text {
+    text-align: center;
+    font-family: var(--tertiary-fnt);
+    color: var(--company-clr);
+  }
+
+  .bike-wheel-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bike-not-selected {
+    opacity: 0;
+  }
+
+  .bike-selected {
+    opacity: 1;
+  }
+}
+
 /* x-small mobile */
 @media (max-width: 320px) {
   .bikes-page {
@@ -101,6 +254,7 @@
   }
 
   .bike-wheel {
+    margin-top: auto;
     height: 200px;
   }
 
