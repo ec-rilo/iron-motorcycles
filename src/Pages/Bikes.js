@@ -83,28 +83,30 @@ const Bikes = () => {
       <Navbar />
       <div className="bikes-content">
         <p className="bikes-title">Browse by type</p>
-        <div className="bike-chooser-container">
-          {checkboxes.map((cb, index) => {
-            const newKey = uniqid();
-            return (
-              <label key={newKey} htmlFor={cb.forId}>
-                <input
-                  type="radio"
-                  name={cb.forId}
-                  id={cb.forId}
-                  className="slide-toggle"
-                  checked={cb.value}
-                  onChange={(e) => {
-                    toggleBikes(e, index);
-                    checkboxStateHandler(e, index);
-                  }}
-                />
-                <span>{cb.name}</span>
-              </label>
-            );
-          })}
-          <div className="slider">
-            <div className="bar second-selected"></div>
+        <div className="slider-container">
+          <div className="bike-chooser-container">
+            {checkboxes.map((cb, index) => {
+              const newKey = uniqid();
+              return (
+                <label key={newKey} htmlFor={cb.forId}>
+                  <input
+                    type="radio"
+                    name={cb.forId}
+                    id={cb.forId}
+                    className="slide-toggle"
+                    checked={cb.value}
+                    onChange={(e) => {
+                      toggleBikes(e, index);
+                      checkboxStateHandler(e, index);
+                    }}
+                  />
+                  <span>{cb.name}</span>
+                </label>
+              );
+            })}
+            <div className="slider">
+              <div className="bar second-selected"></div>
+            </div>
           </div>
         </div>
         <div className="bike-wheel">
