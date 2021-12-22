@@ -621,6 +621,7 @@
   }
 
   .bike-not-selected {
+    display: none;
     opacity: 0;
   }
 
