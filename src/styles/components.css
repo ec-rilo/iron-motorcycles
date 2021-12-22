@@ -92,6 +92,180 @@
     font-size: 1.3rem;
     cursor: pointer;
   }
+
+  /* BikeDetail.js */
+  .bike-detail-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bike-detail-upper-content-container {
+    padding-top: 150px;
+    width: 100%;
+    background-color: var(--primary-clr);
+  }
+
+  .bike-detail-upper-content {
+    position: relative;
+    /* new code */
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+    max-width: 2000px;
+    margin: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    /* new code */
+  }
+
+  .bike-detail-info {
+    color: var(--secondary-clr);
+    font-family: var(--secondary-fnt);
+    /* new code */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 0 0 20px;
+    max-width: 700px;
+    /* new code */
+  }
+
+  .bike-detail-category-name {
+    /* new code */
+    font-size: 2rem;
+    /* new code */
+  }
+
+  .bike-detail-title-info {
+    text-transform: uppercase;
+  }
+
+  .bike-detail-title {
+    color: var(--company-clr);
+    /* new code */
+    font-size: 5rem;
+    /* new code */
+  }
+
+  .bike-detail-upper-text {
+    display: block;
+    font-family: var(--primary-fnt);
+    font-size: 2rem;
+  }
+
+  .bike-detail-upper-price {
+    display: block;
+    color: var(--company-clr);
+    font-size: 2rem;
+  }
+
+  .bike-detail-upper-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 2rem;
+    font-family: var(--primary-fnt);
+  }
+
+  .bike-detail-upper-specs-title {
+    color: var(--company-clr);
+  }
+
+  .bike-detail-upper-specs-text {
+    color: var(--secondary-clr);
+  }
+
+  .bike-detail-upper-content-lower-contaier {
+    position: relative;
+    top: 300px;
+    display: flex;
+    align-items: center;
+    max-width: 2000px;
+    height: 200px;
+    margin: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .bike-detail-img {
+    display: block;
+    margin: auto;
+    position: absolute;
+    /* new code */
+    height: 700px;
+    bottom: -480px;
+    /* new code */
+    object-fit: contain;
+    left: 0;
+    right: 0;
+  }
+
+  .bike-detail-lower-content {
+    position: relative;
+    margin-top: 150px;
+    flex-grow: 1;
+    /* new code */
+    display: none;
+    /* new code */
+    background-color: var(--primary-clr);
+  }
+
+  .bike-detail-lower-content .bike-detail-text {
+    color: var(--secondary-clr);
+    font-family: var(--primary-fnt);
+    text-align: center;
+    margin: 40px 20px;
+  }
+
+  .bike-detail-lower-content .bike-detail-price {
+    display: block;
+    color: var(--company-clr);
+    margin: 20px;
+    font-family: var(--secondary-fnt);
+  }
+
+  .bike-detail-lower-content .separation-line {
+    height: 2px;
+    background-color: var(--secondary-clr);
+    margin: auto 20px;
+  }
+
+  .bike-detail-specs-content {
+    color: var(--secondary-clr);
+    margin: 30px 20px;
+    line-height: 1.5;
+  }
+
+  .bike-detail-specs-title {
+    color: var(--company-clr);
+    font-family: var(--tertiary-fnt);
+    font-size: 1.2rem;
+  }
+
+  .bike-detail-specs-text {
+    font-family: var(--primary-fnt);
+  }
+
+  /* BikeDetail.js */
+
+  .add-to-cart-btn {
+    position: relative;
+    display: flex;
+    top: 0px;
+    margin: initial;
+    left: initial;
+    right: initial;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-clr);
+    text-transform: uppercase;
+    font-family: var(--tertiary-fnt);
+    background-color: var(--company-clr);
+    width: 300px;
+    height: 80px;
+    font-size: 2rem;
+  }
 }
 
 /* Tablets and larger phones */
@@ -212,6 +386,14 @@
     /* new code */
   }
 
+  .bike-detail-upper-text {
+    display: none;
+  }
+
+  .bike-detail-upper-price {
+    display: none;
+  }
+
   .bike-detail-img {
     display: block;
     margin: auto;
@@ -223,6 +405,18 @@
     object-fit: contain;
     left: 0;
     right: 0;
+  }
+
+  .bike-detail-title-info {
+    text-transform: uppercase;
+  }
+
+  .bike-detail-upper-specs {
+    display: none;
+  }
+
+  .bike-detail-upper-content-lower-contaier {
+    display: none;
   }
 
   .bike-detail-lower-content {
