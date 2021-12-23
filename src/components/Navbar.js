@@ -1,4 +1,4 @@
-import cartSrc from '../images/cart-white.png';
+import Cart from './Cart/Cart.js';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -37,7 +37,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <img className="img-small" src={cartSrc} alt="Shopping Cart" />
+            <Cart />
           </li>
         </ul>
       </nav>
