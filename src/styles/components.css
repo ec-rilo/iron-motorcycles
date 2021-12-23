@@ -858,4 +858,61 @@
     margin: auto;
     font-size: 0.9rem;
   }
+
+  /* Collection Page */
+  .collection-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-clr);
+  }
+
+  .collection-landing-page {
+    background-color: var(--primary-clr);
+    flex-grow: 1;
+  }
+
+  .collection-landing-cover-container {
+    position: relative;
+    height: 40vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('../images/bikes/cruisers/cruiser-cover.jpg');
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .collection-landing-cover-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: var(--secondary-clr);
+    font-family: var(--secondary-fnt);
+    font-size: 2rem;
+  }
+
+  .collection-landing-data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 40vh;
+    line-height: 1.2;
+    margin: 20px;
+  }
+
+  .collection-landing-data-title {
+    color: var(--company-clr);
+    font-family: var(--primary-fnt);
+  }
+
+  .collection-landing-data-text {
+    color: var(--secondary-clr);
+    font-family: var(--primary-fnt);
+  }
+
+  .shop-now-text {
+    position: absolute;
+    bottom: 0;
+    color: var(--secondary-clr);
+    font-family: var(--primary-fnt);
+  }
+  /* Collection Page */
 }
