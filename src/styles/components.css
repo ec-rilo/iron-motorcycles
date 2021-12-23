@@ -635,6 +635,20 @@
     font-size: 1.5rem;
   }
   /* Collection Page */
+
+  /* Collection Catalog Page */
+  .collection-catalog-container {
+    background-color: var(--secondary-clr);
+  }
+
+  .collection-bike-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 50px;
+  }
+  /* Collection Catalog Page */
 }
 
 /* regular mobile */
