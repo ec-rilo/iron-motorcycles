@@ -7,6 +7,9 @@ import cvotriglideImg from '../images/bikes/trikes/cvo-tri-glide.png';
 import roadkingImg from '../images/bikes/grand-american-touring/road-king.png';
 import roadkingspecialImg from '../images/bikes/grand-american-touring/road-king-special.png';
 import roadglidespecialImg from '../images/bikes/grand-american-touring/road-glide-special.png';
+import trikeCoverImg from '../images/bikes/trikes/trike-cover.jpg';
+import cruiserCoverImg from '../images/bikes/cruisers/cruiser-cover.jpg';
+import gatCoverImg from '../images/bikes/grand-american-touring/gat-cover.jpg';
 
 const bikeData = (() => {
   const trike = [
@@ -116,7 +119,28 @@ const bikeData = (() => {
     },
   ];
 
-  return { trike, cruisers, gat };
+  const data = [
+    {
+      type: 'Trike',
+      description:
+        'Roll with confidence, comfort, and head-turning custom style on three wheels.',
+      image: trikeCoverImg,
+    },
+    {
+      type: 'Cruiser',
+      description:
+        'Authentic heritage meets modern technology for power, style, and the unadulterated riding experience - around town or along country roads.',
+      image: cruiserCoverImg,
+    },
+    {
+      type: 'Grand American Touring',
+      description:
+        "The category we've created from the ground up. Go the distance, in style. Discover the wide open world and freedom for the soul on bikes only Harley-Davidson could build.",
+      image: gatCoverImg,
+    },
+  ];
+
+  return { trike, cruisers, gat, data };
 })();
 
 export default bikeData;
