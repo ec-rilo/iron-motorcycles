@@ -1,9 +1,11 @@
 import { useLocation } from 'react-router-dom';
+import bikeImg from '../images/bikes/cruisers/iron-883.png';
+import uniqid from 'uniqid';
 import Navbar from './Navbar';
 
 const Collection = () => {
   const location = useLocation();
-  const { data } = location.state;
+  const { bikes, data } = location.state;
   const gradient = 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),';
   const bgSize = ' center/cover ';
   const imgSrc = `url(${data.image})`;
@@ -25,6 +27,26 @@ const Collection = () => {
             <p className="collection-landing-data-text">{data.description}</p>
           </div>
           <p className="shop-now-text">SHOP NOW</p>
+        </div>
+      </div>
+      <div className="collection-catalog-container">
+        <p className="bikes-title">Everything you need, Nothing you don't</p>
+        <div className="collection-bike-container">
+          {bikes.map((bike) => {
+            return (
+              <div key={uniqid()} className="collection-bike">
+                <img
+                  className="bike-wheel-img"
+                  src={bike.image}
+                  alt={`${bike.type} motorcycle - ${bike.name}`}
+                />
+                <div className="bike-wheel-text-content">
+                  <p className="bike-wheel-title">{bike.name}</p>
+                  <p className="bike-wheel-text">Starting at ${bike.price}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
