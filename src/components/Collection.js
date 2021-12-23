@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import bikeImg from '../images/bikes/cruisers/iron-883.png';
 import uniqid from 'uniqid';
 import Navbar from './Navbar';
@@ -34,17 +34,26 @@ const Collection = () => {
         <div className="collection-bike-container">
           {bikes.map((bike) => {
             return (
-              <div key={uniqid()} className="collection-bike">
-                <img
-                  className="bike-wheel-img"
-                  src={bike.image}
-                  alt={`${bike.type} motorcycle - ${bike.name}`}
-                />
-                <div className="bike-wheel-text-content">
-                  <p className="bike-wheel-title">{bike.name}</p>
-                  <p className="bike-wheel-text">Starting at ${bike.price}</p>
+              <Link
+                style={{ color: 'var(--primary-clr)', textDecoration: 'none' }}
+                key={uniqid()}
+                to={`/bikes/:collection/${bike.name}`}
+                state={{
+                  bikeData: bike,
+                }}
+              >
+                <div key={uniqid()} className="collection-bike">
+                  <img
+                    className="bike-wheel-img"
+                    src={bike.image}
+                    alt={`${bike.type} motorcycle - ${bike.name}`}
+                  />
+                  <div className="bike-wheel-text-content">
+                    <p className="bike-wheel-title">{bike.name}</p>
+                    <p className="bike-wheel-text">Starting at ${bike.price}</p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
