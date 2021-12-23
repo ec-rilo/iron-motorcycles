@@ -348,6 +348,24 @@
     margin-left: 50px;
   }
   /* Collection Page */
+
+  /* Collection Catalog Page */
+  .collection-catalog-container {
+    background-color: var(--secondary-clr);
+    height: 100vh;
+  }
+
+  .collection-bike-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 2000px;
+    margin: 0 auto 50px auto;
+    gap: 200px;
+    flex-wrap: wrap;
+  }
+  /* Collection Catalog Page */
 }
 
 /* Tablets and larger phones */
