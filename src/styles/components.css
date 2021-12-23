@@ -382,9 +382,29 @@
     justify-content: space-between;
   }
 
+  .nav-cart-container {
+    position: relative;
+  }
+
   .img-small {
     height: 40px;
     width: 40px;
+  }
+
+  .cart-bubble {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    width: 25px;
+    height: 25px;
+    background-color: var(--company-clr);
+    font-family: var(--secondary-fnt);
+    color: var(--primary-clr);
+    border-radius: 50%;
+    bottom: 0;
+    right: -10px;
   }
 
   .logo-small {
