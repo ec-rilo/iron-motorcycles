@@ -1,45 +1,1189 @@
-/* DEFAULT */
+/* Desktop and larger devices */
+@media (min-width: 1400px) {
+  /* NAVBAR */
+  .container {
+    background-color: var(--primary-clr);
+  }
+  nav {
+    margin: auto;
+    display: flex;
+    background-color: var(--primary-clr);
+    color: var(--secondary-clr);
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: space-between;
+    max-width: 2000px;
+  }
 
-/* NAVBAR */
+  .img-small {
+    height: 40px;
+    width: 40px;
+  }
 
-nav {
-  background-color: var(--primary-clr);
-  color: var(--secondary-clr);
+  .logo-small {
+    font-family: var(--secondary-fnt);
+    font-size: 1.5rem;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .nav-items {
+    display: flex;
+    padding: 10px 30px;
+    align-items: center;
+    font-family: var(--primary-fnt);
+    font-size: 1rem;
+    gap: 20px;
+  }
+
+  .nav-items > li {
+    cursor: pointer;
+  }
+
+  /* Shop Now Button */
+
+  .shop-now-btn {
+    cursor: pointer;
+    font-family: var(--tertiary-fnt);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-clr);
+    color: var(--primary-clr);
+    width: 200px;
+    height: 70px;
+    margin-left: 95px;
+    margin-top: 60px;
+    font-size: 1.5rem;
+  }
+
+  .page-banner {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-family: var(--tertiary-fnt);
+    color: var(--secondary-clr);
+    background-position: center top;
+    text-transform: uppercase;
+  }
+
+  .social-media-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+  }
+
+  .view-collection-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-clr);
+    text-transform: uppercase;
+    font-family: var(--tertiary-fnt);
+    background-color: var(--company-clr);
+    width: 300px;
+    height: 60px;
+    margin: 100px auto;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+
+  /* BikeDetail.js */
+  .bike-detail-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bike-detail-upper-content-container {
+    padding-top: 150px;
+    width: 100%;
+    background-color: var(--primary-clr);
+  }
+
+  .bike-detail-upper-content {
+    position: relative;
+    /* new code */
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+    max-width: 2000px;
+    margin: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    /* new code */
+  }
+
+  .bike-detail-info {
+    color: var(--secondary-clr);
+    font-family: var(--secondary-fnt);
+    /* new code */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 0 0 20px;
+    max-width: 700px;
+    /* new code */
+  }
+
+  .bike-detail-category-name {
+    /* new code */
+    font-size: 2rem;
+    /* new code */
+  }
+
+  .bike-detail-title-info {
+    text-transform: uppercase;
+  }
+
+  .bike-detail-title {
+    color: var(--company-clr);
+    /* new code */
+    font-size: 5rem;
+    /* new code */
+  }
+
+  .bike-detail-upper-text {
+    display: block;
+    font-family: var(--primary-fnt);
+    font-size: 2rem;
+  }
+
+  .bike-detail-upper-price {
+    display: block;
+    color: var(--company-clr);
+    font-size: 2rem;
+  }
+
+  .bike-detail-upper-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 2rem;
+    font-family: var(--primary-fnt);
+  }
+
+  .bike-detail-upper-specs-title {
+    color: var(--company-clr);
+  }
+
+  .bike-detail-upper-specs-text {
+    color: var(--secondary-clr);
+  }
+
+  .bike-detail-upper-content-lower-contaier {
+    position: relative;
+    top: 300px;
+    display: flex;
+    align-items: center;
+    max-width: 2000px;
+    height: 200px;
+    margin: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .bike-detail-img {
+    display: block;
+    margin: auto;
+    position: absolute;
+    /* new code */
+    height: 700px;
+    bottom: -480px;
+    /* new code */
+    object-fit: contain;
+    left: 0;
+    right: 0;
+  }
+
+  .bike-detail-lower-content {
+    position: relative;
+    margin-top: 150px;
+    flex-grow: 1;
+    /* new code */
+    display: none;
+    /* new code */
+    background-color: var(--primary-clr);
+  }
+
+  .bike-detail-lower-content .bike-detail-text {
+    color: var(--secondary-clr);
+    font-family: var(--primary-fnt);
+    text-align: center;
+    margin: 40px 20px;
+  }
+
+  .bike-detail-lower-content .bike-detail-price {
+    display: block;
+    color: var(--company-clr);
+    margin: 20px;
+    font-family: var(--secondary-fnt);
+  }
+
+  .bike-detail-lower-content .separation-line {
+    height: 2px;
+    background-color: var(--secondary-clr);
+    margin: auto 20px;
+  }
+
+  .bike-detail-specs-content {
+    color: var(--secondary-clr);
+    margin: 30px 20px;
+    line-height: 1.5;
+  }
+
+  .bike-detail-specs-title {
+    color: var(--company-clr);
+    font-family: var(--tertiary-fnt);
+    font-size: 1.2rem;
+  }
+
+  .bike-detail-specs-text {
+    font-family: var(--primary-fnt);
+  }
+
+  /* BikeDetail.js */
+
+  .add-to-cart-btn {
+    position: relative;
+    display: flex;
+    top: 0px;
+    margin: initial;
+    left: initial;
+    right: initial;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-clr);
+    text-transform: uppercase;
+    font-family: var(--tertiary-fnt);
+    background-color: var(--company-clr);
+    width: 300px;
+    height: 80px;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  /* Collection Page */
+  .collection-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-clr);
+  }
+
+  .collection-landing-page {
+    background-color: var(--primary-clr);
+    display: flex;
+    flex-direction: row-reverse;
+    height: 95vh;
+  }
+
+  .collection-landing-cover-container {
+    position: relative;
+    width: 50vw;
+    background-position: center top;
+  }
+
+  .collection-landing-data-container .collection-landing-cover-title {
+    display: block;
+    bottom: 20px;
+    left: 20px;
+    color: var(--secondary-clr);
+    font-family: var(--secondary-fnt);
+    font-size: 5rem;
+  }
+
+  .collection-landing-cover-container .collection-landing-cover-title {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: var(--secondary-clr);
+    font-family: var(--secondary-fnt);
+    font-size: 3.5rem;
+  }
+
+  .collection-landing-data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 1.2;
+    width: 1000px;
+    margin-top: 200px;
+  }
+
+  .collection-landing-data-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 700px;
+    margin-left: 50px;
+  }
+
+  .collection-landing-data-title {
+    color: var(--company-clr);
+    font-family: var(--primary-fnt);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+
+  .collection-landing-data-text {
+    color: var(--secondary-clr);
+    font-family: var(--primary-fnt);
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .shop-now-text {
+    position: absolute;
+    bottom: 50px;
+    margin-top: 20px;
+    color: var(--secondary-clr);
+    font-family: var(--primary-fnt);
+    font-size: 1.5rem;
+    margin-left: 50px;
+    cursor: pointer;
+  }
+  /* Collection Page */
+
+  /* Collection Catalog Page */
+  .collection-catalog-container {
+    background-color: var(--secondary-clr);
+    height: 100vh;
+  }
+
+  .collection-bike-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 2000px;
+    margin: 0 auto 50px auto;
+    gap: 200px;
+    flex-wrap: wrap;
+  }
+  /* Collection Catalog Page */
 }
 
-.img-small {
-  height: 40px;
-  width: 40px;
+/* Tablets and larger phones */
+@media (max-width: 1400px) {
+  /* NAVBAR */
+
+  nav {
+    display: flex;
+    background-color: var(--primary-clr);
+    color: var(--secondary-clr);
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: space-between;
+  }
+
+  .img-small {
+    height: 40px;
+    width: 40px;
+  }
+
+  .logo-small {
+    font-family: var(--secondary-fnt);
+    font-size: 1.5rem;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .nav-items {
+    display: flex;
+    padding: 10px 30px;
+    align-items: center;
+    font-family: var(--primary-fnt);
+    font-size: 1rem;
+    gap: 20px;
+  }
+
+  /* Shop Now Button */
+
+  .shop-now-btn {
+    cursor: pointer;
+    font-family: var(--tertiary-fnt);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-clr);
+    color: var(--primary-clr);
+    width: 200px;
+    height: 70px;
+    margin-left: 80px;
+    margin-top: 60px;
+    font-size: 1.5rem;
+  }
+
+  .page-banner {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-family: var(--tertiary-fnt);
+    color: var(--secondary-clr);
+    background-position: center top;
+    text-transform: uppercase;
+  }
+
+  .social-media-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+  }
+
+  .view-collection-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-clr);
+    text-transform: uppercase;
+    font-family: var(--tertiary-fnt);
+    background-color: var(--company-clr);
+    width: 200px;
+    height: 50px;
+    margin: 20px auto;
+    font-size: 0.9rem;
+  }
+
+  /* BikeDetail.js */
+  .bike-detail-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bike-detail-upper-content {
+    position: relative;
+    background-color: black;
+    /* new code */
+    height: 200px;
+    /* new code */
+  }
+
+  .bike-detail-info {
+    color: var(--secondary-clr);
+    font-family: var(--secondary-fnt);
+    padding: 20px 0 0 20px;
+  }
+
+  .bike-detail-category-name {
+    /* new code */
+    font-size: 1.5rem;
+    /* new code */
+  }
+
+  .bike-detail-title {
+    color: var(--company-clr);
+    /* new code */
+    font-size: 3rem;
+    /* new code */
+  }
+
+  .bike-detail-upper-text {
+    display: none;
+  }
+
+  .bike-detail-upper-price {
+    display: none;
+  }
+
+  .bike-detail-img {
+    display: block;
+    margin: auto;
+    position: absolute;
+    /* new code */
+    height: 250px;
+    bottom: -100px;
+    /* new code */
+    object-fit: contain;
+    left: 0;
+    right: 0;
+  }
+
+  .bike-detail-title-info {
+    text-transform: uppercase;
+  }
+
+  .bike-detail-upper-specs {
+    display: none;
+  }
+
+  .bike-detail-upper-content-lower-contaier {
+    display: none;
+  }
+
+  .bike-detail-lower-content {
+    position: relative;
+    /* new code */
+    margin-top: 150px;
+    flex-grow: 1;
+    /* new code */
+    background-color: var(--primary-clr);
+  }
+
+  .bike-detail-lower-content .bike-detail-text {
+    color: var(--secondary-clr);
+    font-family: var(--primary-fnt);
+    text-align: center;
+    margin: 40px 20px;
+  }
+
+  .bike-detail-lower-content .bike-detail-price {
+    display: block;
+    color: var(--company-clr);
+    margin: 20px;
+    font-family: var(--secondary-fnt);
+  }
+
+  .bike-detail-lower-content .separation-line {
+    height: 2px;
+    background-color: var(--secondary-clr);
+    margin: auto 20px;
+  }
+
+  .bike-detail-specs-content {
+    color: var(--secondary-clr);
+    margin: 30px 20px;
+    line-height: 1.5;
+  }
+
+  .bike-detail-specs-title {
+    color: var(--company-clr);
+    font-family: var(--tertiary-fnt);
+    font-size: 1.2rem;
+  }
+
+  .bike-detail-specs-text {
+    font-family: var(--primary-fnt);
+  }
+
+  /* BikeDetail.js */
+
+  .add-to-cart-btn {
+    position: absolute;
+    display: flex;
+    top: -20px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-clr);
+    text-transform: uppercase;
+    font-family: var(--tertiary-fnt);
+    background-color: var(--company-clr);
+    width: 150px;
+    height: 40px;
+    margin: auto;
+    font-size: 0.9rem;
+  }
+
+  /* Collection Page */
+  .collection-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-clr);
+  }
+
+  .collection-landing-page {
+    background-color: var(--primary-clr);
+    flex-grow: 1;
+  }
+
+  .collection-landing-cover-container {
+    position: relative;
+    height: 40vh;
+    background-position: center top;
+  }
+
+  .collection-landing-data-container .collection-landing-cover-title {
+    display: none;
+  }
+
+  .collection-landing-cover-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: var(--secondary-clr);
+    font-family: var(--secondary-fnt);
+    font-size: 3.5rem;
+  }
+
+  .collection-landing-data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 50vh;
+    line-height: 1.2;
+    margin: 20px;
+  }
+
+  .collection-landing-data-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .collection-landing-data-title {
+    color: var(--company-clr);
+    font-family: var(--primary-fnt);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+
+  .collection-landing-data-text {
+    color: var(--secondary-clr);
+    font-family: var(--primary-fnt);
+    font-size: 1.5rem;
+  }
+
+  .shop-now-text {
+    position: relative;
+    margin-top: 20px;
+    color: var(--secondary-clr);
+    font-family: var(--primary-fnt);
+    font-size: 1.5rem;
+  }
+  /* Collection Page */
+
+  /* Collection Catalog Page */
+  .collection-catalog-container {
+    background-color: var(--secondary-clr);
+  }
+
+  .collection-bike-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 50px;
+  }
+  /* Collection Catalog Page */
 }
 
-.logo-small {
-  font-family: var(--secondary-fnt);
-  font-size: 1.5rem;
-  padding: 20px;
-  text-align: center;
+/* regular mobile */
+@media (max-width: 750px) {
+  /* NAVBAR */
+
+  nav {
+    display: block;
+    background-color: var(--primary-clr);
+    color: var(--secondary-clr);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .img-small {
+    height: 40px;
+    width: 40px;
+  }
+
+  .logo-small {
+    font-family: var(--secondary-fnt);
+    font-size: 1.5rem;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .nav-items {
+    display: flex;
+    padding: 10px 30px;
+    align-items: center;
+    font-family: var(--primary-fnt);
+    font-size: 1rem;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  /* Shop Now Button */
+
+  .shop-now-btn {
+    cursor: pointer;
+    font-family: var(--tertiary-fnt);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-clr);
+    color: var(--primary-clr);
+    width: 150px;
+    height: 50px;
+    margin-left: 65px;
+    margin-top: 30px;
+    font-size: 1rem;
+  }
+
+  .page-banner {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-family: var(--tertiary-fnt);
+    color: var(--secondary-clr);
+    background-position: center top;
+    text-transform: uppercase;
+  }
+
+  .social-media-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+  }
+
+  .view-collection-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-clr);
+    text-transform: uppercase;
+    font-family: var(--tertiary-fnt);
+    background-color: var(--company-clr);
+    width: 150px;
+    height: 40px;
+    margin: 20px auto;
+    font-size: 0.9rem;
+  }
+
+  /* BikeDetail.js */
+  .bike-detail-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bike-detail-upper-content {
+    position: relative;
+    background-color: black;
+    height: 180px;
+  }
+
+  .bike-detail-info {
+    color: var(--secondary-clr);
+    font-family: var(--secondary-fnt);
+    padding: 20px 0 0 20px;
+  }
+
+  .bike-detail-category-name {
+    font-size: 1rem;
+  }
+
+  .bike-detail-title {
+    color: var(--company-clr);
+    font-size: 2rem;
+  }
+
+  .bike-detail-img {
+    display: block;
+    margin: auto;
+    position: absolute;
+    height: 150px;
+    object-fit: contain;
+    left: 0;
+    right: 0;
+    bottom: -55px;
+  }
+
+  .bike-detail-lower-content {
+    position: relative;
+    margin-top: 100px;
+    background-color: var(--primary-clr);
+  }
+
+  .bike-detail-lower-content .bike-detail-text {
+    color: var(--secondary-clr);
+    font-family: var(--primary-fnt);
+    text-align: center;
+    margin: 40px 20px;
+  }
+
+  .bike-detail-lower-content .bike-detail-price {
+    display: block;
+    color: var(--company-clr);
+    margin: 20px;
+    font-family: var(--secondary-fnt);
+  }
+
+  .bike-detail-lower-content .separation-line {
+    height: 2px;
+    background-color: var(--secondary-clr);
+    margin: auto 20px;
+  }
+
+  .bike-detail-specs-content {
+    color: var(--secondary-clr);
+    margin: 30px 20px;
+    line-height: 1.5;
+  }
+
+  .bike-detail-specs-title {
+    color: var(--company-clr);
+    font-family: var(--tertiary-fnt);
+    font-size: 1.2rem;
+  }
+
+  .bike-detail-specs-text {
+    font-family: var(--primary-fnt);
+  }
+
+  /* BikeDetail.js */
+
+  .add-to-cart-btn {
+    position: absolute;
+    display: flex;
+    top: -20px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-clr);
+    text-transform: uppercase;
+    font-family: var(--tertiary-fnt);
+    background-color: var(--company-clr);
+    width: 150px;
+    height: 40px;
+    margin: auto;
+    font-size: 0.9rem;
+  }
+
+  /* Collection Page */
+  .collection-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-clr);
+  }
+
+  .collection-landing-page {
+    background-color: var(--primary-clr);
+    flex-grow: 1;
+  }
+
+  .collection-landing-cover-container {
+    position: relative;
+    height: 40vh;
+    background-position: center top;
+  }
+
+  .collection-landing-cover-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: var(--secondary-clr);
+    font-family: var(--secondary-fnt);
+    font-size: 2rem;
+  }
+
+  .collection-landing-data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 40vh;
+    line-height: 1.2;
+    margin: 20px;
+  }
+
+  .collection-landing-data-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .collection-landing-data-title {
+    color: var(--company-clr);
+    font-family: var(--primary-fnt);
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+
+  .collection-landing-data-text {
+    color: var(--secondary-clr);
+    font-family: var(--primary-fnt);
+    font-size: 1rem;
+  }
+
+  .shop-now-text {
+    position: relative;
+    margin-top: 20px;
+    color: var(--secondary-clr);
+    font-family: var(--primary-fnt);
+    font-size: 1rem;
+  }
+  /* Collection Page */
+
+  /* Collection Catalog Page */
+  .collection-catalog-container {
+    background-color: var(--secondary-clr);
+  }
+
+  .collection-bike-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 50px;
+  }
+  /* Collection Catalog Page */
 }
 
-.nav-items {
-  display: flex;
-  padding: 10px 30px;
-  align-items: center;
-  font-family: var(--primary-fnt);
-  font-size: 1rem;
-  justify-content: space-evenly;
-}
+/* x-small mobile */
+@media (max-width: 320px) {
+  /* NAVBAR */
 
-/* Shop Now Button */
+  nav {
+    background-color: var(--primary-clr);
+    color: var(--secondary-clr);
+  }
 
-.shop-now-btn {
-  font-family: var(--tertiary-fnt);
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--secondary-clr);
-  color: var(--primary-clr);
-  width: 150px;
-  height: 50px;
-  margin-left: 65px;
-  margin-top: 30px;
+  .img-small {
+    height: 35px;
+    width: 35px;
+  }
+
+  .logo-small {
+    font-family: var(--secondary-fnt);
+    font-size: 1.3rem;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .nav-items {
+    display: flex;
+    padding: 10px 30px;
+    align-items: center;
+    font-family: var(--primary-fnt);
+    font-size: 1rem;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  /* Shop Now Button */
+
+  .shop-now-btn {
+    cursor: pointer;
+    font-family: var(--tertiary-fnt);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-clr);
+    color: var(--primary-clr);
+    width: 150px;
+    height: 50px;
+    margin-left: 65px;
+    margin-top: 30px;
+  }
+
+  .page-banner {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-family: var(--tertiary-fnt);
+    color: var(--secondary-clr);
+    background-position: center top;
+    text-transform: uppercase;
+  }
+
+  .social-media-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+  }
+
+  .view-collection-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-clr);
+    text-transform: uppercase;
+    font-family: var(--tertiary-fnt);
+    background-color: var(--company-clr);
+    width: 150px;
+    height: 40px;
+    margin: 20px auto;
+    font-size: 0.9rem;
+  }
+
+  /* BikeDetail.js */
+  .bike-detail-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bike-detail-upper-content {
+    position: relative;
+    background-color: black;
+    height: 180px;
+  }
+
+  .bike-detail-info {
+    color: var(--secondary-clr);
+    font-family: var(--secondary-fnt);
+    padding: 20px 0 0 20px;
+  }
+
+  .bike-detail-category-name {
+    font-size: 1rem;
+  }
+
+  .bike-detail-title {
+    color: var(--company-clr);
+    font-size: 2rem;
+  }
+
+  .bike-detail-img {
+    display: block;
+    margin: auto;
+    position: absolute;
+    height: 150px;
+    object-fit: contain;
+    left: 0;
+    right: 0;
+    bottom: -55px;
+  }
+
+  .bike-detail-lower-content {
+    position: relative;
+    margin-top: 100px;
+    background-color: var(--primary-clr);
+  }
+
+  .bike-detail-lower-content .bike-detail-text {
+    color: var(--secondary-clr);
+    font-family: var(--primary-fnt);
+    text-align: center;
+    margin: 40px 20px;
+  }
+
+  .bike-detail-lower-content .bike-detail-price {
+    display: block;
+    color: var(--company-clr);
+    margin: 20px;
+    font-family: var(--secondary-fnt);
+  }
+
+  .bike-detail-lower-content .separation-line {
+    height: 2px;
+    background-color: var(--secondary-clr);
+    margin: auto 20px;
+  }
+
+  .bike-detail-specs-content {
+    color: var(--secondary-clr);
+    margin: 30px 20px;
+    line-height: 1.5;
+  }
+
+  .bike-detail-specs-title {
+    color: var(--company-clr);
+    font-family: var(--tertiary-fnt);
+    font-size: 1.2rem;
+  }
+
+  .bike-detail-specs-text {
+    font-family: var(--primary-fnt);
+  }
+
+  /* BikeDetail.js */
+
+  .add-to-cart-btn {
+    position: absolute;
+    display: flex;
+    top: -20px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-clr);
+    text-transform: uppercase;
+    font-family: var(--tertiary-fnt);
+    background-color: var(--company-clr);
+    width: 150px;
+    height: 40px;
+    margin: auto;
+    font-size: 0.9rem;
+  }
+
+  /* Collection Page */
+  .collection-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-clr);
+  }
+
+  .collection-landing-page {
+    background-color: var(--primary-clr);
+    flex-grow: 1;
+  }
+
+  .collection-landing-cover-container {
+    position: relative;
+    height: 40vh;
+    background-position: center top;
+  }
+
+  .collection-landing-cover-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: var(--secondary-clr);
+    font-family: var(--secondary-fnt);
+    font-size: 2rem;
+  }
+
+  .collection-landing-data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 40vh;
+    line-height: 1.2;
+    margin: 20px;
+  }
+
+  .collection-landing-data-title {
+    color: var(--company-clr);
+    font-family: var(--primary-fnt);
+  }
+
+  .collection-landing-data-text {
+    color: var(--secondary-clr);
+    font-family: var(--primary-fnt);
+  }
+
+  .shop-now-text {
+    position: absolute;
+    bottom: 20px;
+    color: var(--secondary-clr);
+    font-family: var(--primary-fnt);
+  }
+  /* Collection Page */
+
+  /* Collection Catalog Page */
+  .collection-catalog-container {
+    background-color: var(--secondary-clr);
+  }
+
+  .collection-bike-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 50px;
+  }
+  /* Collection Catalog Page */
 }
