@@ -10,6 +10,9 @@ import roadglidespecialImg from '../images/bikes/grand-american-touring/road-gli
 import trikeCoverImg from '../images/bikes/trikes/trike-cover.jpg';
 import cruiserCoverImg from '../images/bikes/cruisers/cruiser-cover.jpg';
 import gatCoverImg from '../images/bikes/grand-american-touring/gat-cover.jpg';
+import softailStandardImg from '../images/bikes/cruisers/softail-standard.png';
+import softailSlimImg from '../images/bikes/cruisers/softail-slim.png';
+import lowridersImg from '../images/bikes/cruisers/low-rider-s.png';
 
 const bikeData = (() => {
   const trike = [
@@ -80,6 +83,38 @@ const bikeData = (() => {
       'engine torque': '73 ft-lb',
       'fuel economy': '48 mpg',
       image: fortyEightImg,
+    },
+    {
+      type: 'Cruiser',
+      name: 'Softail Standard™',
+      price: '13,599',
+      description:
+        'Raw, stripped-down bobber style. A blank canvas for customization.',
+      engine: 'Milwaukee-Eight® 107',
+      'engine torque': '110 ft-lb',
+      'fuel economy': '47 mpg',
+      image: softailStandardImg,
+    },
+    {
+      type: 'Cruiser',
+      name: 'Softail Slim®',
+      price: '15,999',
+      description:
+        'The essential stripped-down, low-slung bobber for all-day riding.',
+      engine: 'Milwaukee-Eight® 107',
+      'engine torque': '110 ft-lb',
+      'fuel economy': '47 mpg',
+      image: softailSlimImg,
+    },
+    {
+      type: 'Cruiser',
+      name: 'Low Rider™ S',
+      price: '17,999',
+      description: 'A blacked-out, factory custom performance cruiser.',
+      engine: 'Milwaukee-Eight® 114',
+      'engine torque': '119 ft-lb',
+      'fuel economy': '47 mpg',
+      image: lowridersImg,
     },
   ];
 
