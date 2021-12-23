@@ -1,10 +1,8 @@
 import Navbar from './Navbar';
-import bikeImg from '../images/bikes/cruisers/iron-883.png';
 import AddToCartBtn from './buttons/AddToCartBtn';
 import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import uniqid from 'uniqid';
-import { useMediaQuery } from 'react-responsive';
 
 const BikeDetail = () => {
   const location = useLocation();
@@ -14,8 +12,6 @@ const BikeDetail = () => {
     { type: 'ENGINE TORQUE', data: bikeData['engine torque'] },
     { type: 'FUEL ECONOMY', data: bikeData['fuel economy'] },
   ]);
-
-  const isSmallScreen = useMediaQuery({ maxWidth: 1400 });
 
   return (
     <div className="bike-detail-container">
