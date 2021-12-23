@@ -267,6 +267,90 @@
     font-size: 2rem;
     cursor: pointer;
   }
+
+  /* Collection Page */
+  .collection-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-clr);
+  }
+
+  .collection-landing-page {
+    background-color: var(--primary-clr);
+    display: flex;
+    flex-direction: row-reverse;
+    height: 95vh;
+  }
+
+  .collection-landing-cover-container {
+    position: relative;
+    width: 50vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('../images/bikes/cruisers/cruiser-cover.jpg');
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .collection-landing-data-container .collection-landing-cover-title {
+    display: block;
+    bottom: 20px;
+    left: 20px;
+    color: var(--secondary-clr);
+    font-family: var(--secondary-fnt);
+    font-size: 5rem;
+  }
+
+  .collection-landing-cover-container .collection-landing-cover-title {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: var(--secondary-clr);
+    font-family: var(--secondary-fnt);
+    font-size: 3.5rem;
+  }
+
+  .collection-landing-data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 1.2;
+    width: 1000px;
+    margin-top: 200px;
+  }
+
+  .collection-landing-data-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 700px;
+    margin-left: 50px;
+  }
+
+  .collection-landing-data-title {
+    color: var(--company-clr);
+    font-family: var(--primary-fnt);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+
+  .collection-landing-data-text {
+    color: var(--secondary-clr);
+    font-family: var(--primary-fnt);
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .shop-now-text {
+    position: absolute;
+    bottom: 50px;
+    margin-top: 20px;
+    color: var(--secondary-clr);
+    font-family: var(--primary-fnt);
+    font-size: 1.5rem;
+    margin-left: 50px;
+  }
+  /* Collection Page */
 }
 
 /* Tablets and larger phones */
@@ -506,6 +590,10 @@
       url('../images/bikes/cruisers/cruiser-cover.jpg');
     background-size: cover;
     background-position: center top;
+  }
+
+  .collection-landing-data-container .collection-landing-cover-title {
+    display: none;
   }
 
   .collection-landing-cover-title {
