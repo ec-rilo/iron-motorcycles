@@ -8,9 +8,24 @@ import { Link } from 'react-router-dom';
 
 const Bikes = () => {
   const [checkboxes, setCheckboxes] = useState([
-    { name: 'Trike', forId: 'slide-item-1', value: false },
-    { name: 'Cruiser', forId: 'slide-item-2', value: true },
-    { name: 'Grand American Touring', forId: 'slide-item-3', value: false },
+    {
+      name: 'Trike',
+      forId: 'slide-item-1',
+      value: false,
+      data: bikeData.data[0],
+    },
+    {
+      name: 'Cruiser',
+      forId: 'slide-item-2',
+      value: true,
+      data: bikeData.data[1],
+    },
+    {
+      name: 'Grand American Touring',
+      forId: 'slide-item-3',
+      value: false,
+      data: bikeData.data[2],
+    },
   ]);
 
   const [bikesArr, setBikesArr] = useState([
@@ -120,7 +135,7 @@ const Bikes = () => {
                 <Link
                   style={{ color: 'var(--primary-clr)' }}
                   key={uniqid()}
-                  to={`/bikes/${item.data[0].name}`}
+                  to={`/bikes/:collection/${item.data[0].name}`}
                   state={{
                     bikeData: item.data[0],
                   }}
@@ -150,7 +165,7 @@ const Bikes = () => {
                     return (
                       <Link
                         key={uniqid()}
-                        to={`/bikes/${item.data[idx].name}`}
+                        to={`/bikes/:collection/${item.data[idx].name}`}
                         state={{
                           bikeData: item.data[idx],
                         }}
@@ -182,7 +197,10 @@ const Bikes = () => {
             }
           })}
         </div>
-        <ViewCollectionBtn />
+        <ViewCollectionBtn
+          bikes={bikesArr.find((bike) => bike.class === 'bike-selected').data}
+          data={checkboxes.find((cb) => cb.value === true).data}
+        />
       </div>
     </div>
   );
