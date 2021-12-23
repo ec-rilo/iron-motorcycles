@@ -1,6 +1,5 @@
 import { useLocation, Link } from 'react-router-dom';
 import { Link as HashLink } from 'react-scroll';
-import bikeImg from '../images/bikes/cruisers/iron-883.png';
 import uniqid from 'uniqid';
 import Navbar from './Navbar';
 
