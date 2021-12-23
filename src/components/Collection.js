@@ -10,6 +10,7 @@ const Collection = () => {
         </div>
         <div className="collection-landing-data-container">
           <div className="collection-landing-data-text-container">
+            <p className="collection-landing-cover-title">Cruiser</p>
             <p className="collection-landing-data-title">2021 Motorcycles</p>
             <p className="collection-landing-data-text">
               Authentic heritage meets modern technology for power, style, and
