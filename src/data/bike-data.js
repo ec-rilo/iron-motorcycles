@@ -13,6 +13,9 @@ import gatCoverImg from '../images/bikes/grand-american-touring/gat-cover.jpg';
 import softailStandardImg from '../images/bikes/cruisers/softail-standard.png';
 import softailSlimImg from '../images/bikes/cruisers/softail-slim.png';
 import lowridersImg from '../images/bikes/cruisers/low-rider-s.png';
+import cvoroadglideImg from '../images/bikes/grand-american-touring/cvo-road-glide.png';
+import cvostreetglideImg from '../images/bikes/grand-american-touring/cvo-street-glide.png';
+import streetglidespecialImg from '../images/bikes/grand-american-touring/street-glide-special.png';
 
 const bikeData = (() => {
   const trike = [
@@ -151,6 +154,39 @@ const bikeData = (() => {
       'engine torque': '118 ft-lb',
       'fuel economy': '45 mpg',
       image: roadglidespecialImg,
+    },
+    {
+      type: 'Grand American Touring',
+      name: 'CVO™ Road Glide™',
+      price: '41,399',
+      description:
+        'A showstopping custom bagger loaded with custom details and power.',
+      engine: 'Milwaukee-Eight® 117',
+      'engine torque': '126 ft-lb',
+      'fuel economy': '41 mpg',
+      image: cvoroadglideImg,
+    },
+    {
+      type: 'Grand American Touring',
+      name: 'Street Glide™ Special',
+      price: '27,099',
+      description:
+        'A factory-custom bagger with highway-shredding power, in a blacked-out or chrome finish.',
+      engine: 'Milwaukee-Eight® 114',
+      'engine torque': '118 ft-lb',
+      'fuel economy': '45 mpg',
+      image: streetglidespecialImg,
+    },
+    {
+      type: 'Grand American Touring',
+      name: 'CVO™ Street Glide™',
+      price: '40,599',
+      description:
+        'The pinnacle of factory-custom touring style and comfort. Visually stunning and loaded with power.',
+      engine: 'Milwaukee-Eight® 117',
+      'engine torque': '126 ft-lb',
+      'fuel economy': '41 mpg',
+      image: cvostreetglideImg,
     },
   ];
 
