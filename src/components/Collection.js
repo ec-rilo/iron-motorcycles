@@ -1,4 +1,5 @@
 import { useLocation, Link } from 'react-router-dom';
+import { Link as HashLink } from 'react-scroll';
 import bikeImg from '../images/bikes/cruisers/iron-883.png';
 import uniqid from 'uniqid';
 import Navbar from './Navbar';
@@ -26,10 +27,15 @@ const Collection = () => {
             <p className="collection-landing-data-title">2021 Motorcycles</p>
             <p className="collection-landing-data-text">{data.description}</p>
           </div>
-          <p className="shop-now-text">SHOP NOW</p>
+          <HashLink smooth={true} duration={500} to={`collection-catalog-page`}>
+            <p className="shop-now-text">SHOP NOW</p>
+          </HashLink>
         </div>
       </div>
-      <div className="collection-catalog-container">
+      <div
+        id="collection-catalog-page"
+        className="collection-catalog-container"
+      >
         <p className="bikes-title">Everything you need, Nothing you don't</p>
         <div className="collection-bike-container">
           {bikes.map((bike) => {
