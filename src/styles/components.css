@@ -346,6 +346,7 @@
     font-family: var(--primary-fnt);
     font-size: 1.5rem;
     margin-left: 50px;
+    cursor: pointer;
   }
   /* Collection Page */
 
