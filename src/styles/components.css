@@ -285,9 +285,6 @@
   .collection-landing-cover-container {
     position: relative;
     width: 50vw;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url('../images/bikes/cruisers/cruiser-cover.jpg');
-    background-size: cover;
     background-position: center top;
   }
 
@@ -586,9 +583,6 @@
   .collection-landing-cover-container {
     position: relative;
     height: 40vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url('../images/bikes/cruisers/cruiser-cover.jpg');
-    background-size: cover;
     background-position: center top;
   }
 
@@ -845,9 +839,6 @@
   .collection-landing-cover-container {
     position: relative;
     height: 40vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url('../images/bikes/cruisers/cruiser-cover.jpg');
-    background-size: cover;
     background-position: center top;
   }
 
@@ -1096,9 +1087,6 @@
   .collection-landing-cover-container {
     position: relative;
     height: 40vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url('../images/bikes/cruisers/cruiser-cover.jpg');
-    background-size: cover;
     background-position: center top;
   }
 
