@@ -1,9 +1,14 @@
-import cartSrc from '../images/cart-white.png';
+import Cart from './Cart/Cart.js';
 import { Link } from 'react-router-dom';
+import CartPopup from './Cart/CartPopup.js';
+import { useState } from 'react';
 
 const Navbar = () => {
+  const [cartItems, setCartItems] = useState([]);
+
   return (
     <div className="container">
+      <CartPopup cartItems={cartItems} />
       <nav>
         <Link
           style={{ textDecoration: 'none', color: 'var(--secondary-clr)' }}
@@ -37,7 +42,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <img className="img-small" src={cartSrc} alt="Shopping Cart" />
+            <Cart />
           </li>
         </ul>
       </nav>
