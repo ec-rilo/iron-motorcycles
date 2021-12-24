@@ -4,15 +4,24 @@ import emptyCartImg from '../../images/cart-grey.png';
 const CartPopup = (props) => {
   const { cartItems } = props;
 
+  const toggleCartPopupBG = (e) => {
+    const fadedBg = document.querySelector('.faded-bg');
+    const cartPopup = document.querySelector('.cart-popup-container');
+    if (e.nativeEvent.path[0] === fadedBg) {
+      fadedBg.classList.toggle('faded-bg-active');
+      cartPopup.classList.toggle('cart-popup-active');
+    }
+  };
+
   const toggleCartPopup = () => {
     const fadedBg = document.querySelector('.faded-bg');
-    fadedBg.classList.toggle('faded-bg-active');
     const cartPopup = document.querySelector('.cart-popup-container');
+    fadedBg.classList.toggle('faded-bg-active');
     cartPopup.classList.toggle('cart-popup-active');
   };
 
   return (
-    <div className="faded-bg">
+    <div className="faded-bg" onClick={(e) => toggleCartPopupBG(e)}>
       <div className="cart-popup-container">
         <div className="cart-popup-content">
           <img
