@@ -1,9 +1,14 @@
 import Cart from './Cart/Cart.js';
 import { Link } from 'react-router-dom';
+import CartPopup from './Cart/CartPopup.js';
+import { useState } from 'react';
 
 const Navbar = () => {
+  const [cartItems, setCartItems] = useState([]);
+
   return (
     <div className="container">
+      <CartPopup cartItems={cartItems} />
       <nav>
         <Link
           style={{ textDecoration: 'none', color: 'var(--secondary-clr)' }}
