@@ -994,6 +994,105 @@
     gap: 50px;
   }
   /* Collection Catalog Page */
+
+  /* Cart popup container */
+  .cart-popup-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-clr);
+    height: 100%;
+    width: 100%;
+    left: 100%;
+    transition: left 0.5s;
+    z-index: 9999;
+    padding: 20px 20px 20px 20px;
+  }
+
+  .cart-popup-active {
+    left: 10%;
+  }
+
+  .cart-popup-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-right: 20%;
+  }
+
+  .close-btn {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    align-self: flex-end;
+    object-fit: contain;
+  }
+
+  .cart-title {
+    text-transform: uppercase;
+    font-family: var(--secondary-fnt);
+    font-size: 1.8rem;
+  }
+
+  .empty-cart-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .empty-cart-text {
+    margin-top: 10px;
+    font-family: var(--primary-fnt);
+    font-size: 1rem;
+  }
+
+  .empty-cart-img {
+    display: block;
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    align-self: center;
+    flex-grow: 1;
+  }
+
+  .cart-continue-shopping-btn {
+    position: relative;
+    bottom: 50px;
+    margin: auto;
+  }
+
+  .faded-bg {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 998;
+    left: 100%;
+    transition: left 0.5s;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .faded-bg-active {
+    left: 0;
+  }
+
+  /* Cart popup container */
+
+  .continue-shopping-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--secondary-fnt);
+    color: var(--secondary-clr);
+    background-color: var(--company-clr);
+    width: 200px;
+    height: 40px;
+    text-transform: uppercase;
+  }
 }
 
 /* x-small mobile */
