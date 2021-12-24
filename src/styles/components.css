@@ -830,10 +830,7 @@
     z-index: 998;
     left: 100%;
     transition: left 0.5s;
-    backdrop-filter: blur(0);
-    -webkit-backdrop-filter: blur(0);
-    backdrop-filter: blur(100px);
-    -webkit-backdrop-filter: blur(100px);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   .faded-bg-active {
@@ -1212,10 +1209,7 @@
     z-index: 998;
     left: 100%;
     transition: left 0.5s;
-    backdrop-filter: blur(0);
-    -webkit-backdrop-filter: blur(0);
-    backdrop-filter: blur(100px);
-    -webkit-backdrop-filter: blur(100px);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   .faded-bg-active {
@@ -1580,10 +1574,7 @@
     z-index: 998;
     left: 100%;
     transition: left 0.5s;
-    backdrop-filter: blur(0);
-    -webkit-backdrop-filter: blur(0);
-    backdrop-filter: blur(100px);
-    -webkit-backdrop-filter: blur(100px);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   .faded-bg-active {
