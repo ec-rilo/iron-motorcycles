@@ -1,7 +1,7 @@
 import cartSrc from '../../images/cart-white.png';
 
 const Cart = (props) => {
-  const { cart, addToCart } = props;
+  const { cart } = props;
 
   const toggleCartPopup = () => {
     const fadedBg = document.querySelector('.faded-bg');
