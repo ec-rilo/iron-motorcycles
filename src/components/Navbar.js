@@ -7,7 +7,7 @@ const Navbar = (props) => {
 
   return (
     <div className="container">
-      <CartPopup />
+      <CartPopup cart={cart} addToCart={addToCart} />
       <nav>
         <Link
           style={{ textDecoration: 'none', color: 'var(--secondary-clr)' }}
