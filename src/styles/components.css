@@ -1352,9 +1352,7 @@
     flex-direction: column;
     gap: 40px;
     margin-top: 20px;
-    max-height: 65vh;
     line-height: normal;
-    overflow-y: auto;
   }
 
   .cart-popup-item {
@@ -1799,9 +1797,7 @@
     flex-direction: column;
     gap: 40px;
     margin-top: 20px;
-    max-height: 300px;
     line-height: normal;
-    overflow-y: auto;
   }
 
   .cart-popup-item {
