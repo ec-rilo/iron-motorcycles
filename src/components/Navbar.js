@@ -1,14 +1,13 @@
 import Cart from './Cart/Cart.js';
 import { Link } from 'react-router-dom';
 import CartPopup from './Cart/CartPopup.js';
-import { useState } from 'react';
 
-const Navbar = () => {
-  const [cartItems, setCartItems] = useState([]);
+const Navbar = (props) => {
+  const { cart, addToCart } = props;
 
   return (
     <div className="container">
-      <CartPopup cartItems={cartItems} />
+      <CartPopup />
       <nav>
         <Link
           style={{ textDecoration: 'none', color: 'var(--secondary-clr)' }}
@@ -42,7 +41,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Cart />
+            <Cart cart={cart} addToCart={addToCart} />
           </li>
         </ul>
       </nav>
