@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BikeDetail from './components/BikeDetail';
 import Collection from './components/Collection';
@@ -6,16 +7,43 @@ import Contact from './Pages/Contact';
 import Home from './Pages/Home';
 
 const RouteSwitch = () => {
+  const [cart, setCart] = useState([]);
+
+  const addItemToCart = (bike) => {
+    const item = {
+      type: bike.type,
+      name: bike.name,
+      price: bike.price,
+      image: bike.image,
+    };
+
+    const newCart = [...cart];
+    newCart.push(item);
+    setCart(newCart);
+  };
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/bikes" element={<Bikes />} />
-        <Route path="/bikes/:collection" element={<Collection />} />
+        <Route
+          path="/"
+          element={<Home cart={cart} addItemToCart={addItemToCart} />}
+        />
+        <Route
+          path="/contact"
+          element={<Contact cart={cart} addItemToCart={addItemToCart} />}
+        />
+        <Route
+          path="/bikes"
+          element={<Bikes cart={cart} addItemToCart={addItemToCart} />}
+        />
+        <Route
+          path="/bikes/:collection"
+          element={<Collection cart={cart} addItemToCart={addItemToCart} />}
+        />
         <Route
           path="/bikes/:collection/:bike_detail"
-          element={<BikeDetail />}
+          element={<BikeDetail cart={cart} addItemToCart={addItemToCart} />}
         />
       </Routes>
     </BrowserRouter>
