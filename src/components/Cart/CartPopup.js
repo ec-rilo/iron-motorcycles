@@ -2,7 +2,7 @@ import closeBtnImg from '../../images/icons/close-btn.png';
 import emptyCartImg from '../../images/cart-grey.png';
 
 const CartPopup = (props) => {
-  const { cart, addToCart } = props;
+  const { cart } = props;
   const toggleCartPopupBG = (e) => {
     const fadedBg = document.querySelector('.faded-bg');
     const cartPopup = document.querySelector('.cart-popup-container');
