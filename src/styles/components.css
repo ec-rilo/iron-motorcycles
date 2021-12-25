@@ -1192,7 +1192,7 @@
     flex-direction: column;
     background-color: var(--secondary-clr);
     height: 100%;
-    width: 80%;
+    width: 100%;
     right: -100%;
     transition: right 0.5s;
     z-index: 9999;
