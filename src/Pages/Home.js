@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom';
 import ShopNowBtn from '../components/buttons/ShopNowBtn';
 import Navbar from '../components/Navbar';
 
-const Home = () => {
+const Home = (props) => {
+  const { cart, addToCart } = props;
   return (
     <div className="home-page">
-      <Navbar />
+      <Navbar cart={cart} addToCart={addToCart} />
       <div className="home-background">
         <div className="home-content-container">
           <div className="home-call-to-action-content">
