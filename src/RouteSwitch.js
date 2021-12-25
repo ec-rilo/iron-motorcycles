@@ -9,7 +9,7 @@ import Home from './Pages/Home';
 const RouteSwitch = () => {
   const [cart, setCart] = useState([]);
 
-  const addItemToCart = (bike) => {
+  const addToCart = (bike) => {
     const item = {
       type: bike.type,
       name: bike.name,
@@ -25,25 +25,22 @@ const RouteSwitch = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="/"
-          element={<Home cart={cart} addItemToCart={addItemToCart} />}
-        />
+        <Route path="/" element={<Home cart={cart} addToCart={addToCart} />} />
         <Route
           path="/contact"
-          element={<Contact cart={cart} addItemToCart={addItemToCart} />}
+          element={<Contact cart={cart} addToCart={addToCart} />}
         />
         <Route
           path="/bikes"
-          element={<Bikes cart={cart} addItemToCart={addItemToCart} />}
+          element={<Bikes cart={cart} addToCart={addToCart} />}
         />
         <Route
           path="/bikes/:collection"
-          element={<Collection cart={cart} addItemToCart={addItemToCart} />}
+          element={<Collection cart={cart} addToCart={addToCart} />}
         />
         <Route
           path="/bikes/:collection/:bike_detail"
-          element={<BikeDetail cart={cart} addItemToCart={addItemToCart} />}
+          element={<BikeDetail cart={cart} addToCart={addToCart} />}
         />
       </Routes>
     </BrowserRouter>
