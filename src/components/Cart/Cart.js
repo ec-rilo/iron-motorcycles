@@ -1,6 +1,8 @@
 import cartSrc from '../../images/cart-white.png';
 
-const Cart = () => {
+const Cart = (props) => {
+  const { cart, addToCart } = props;
+
   const toggleCartPopup = () => {
     const fadedBg = document.querySelector('.faded-bg');
     fadedBg.classList.toggle('faded-bg-active');
@@ -10,8 +12,11 @@ const Cart = () => {
 
   return (
     <div className="nav-cart-container" onClick={() => toggleCartPopup()}>
-      <div className="cart-bubble">
-        <p>15</p>
+      <div
+        style={cart.length === 0 ? { display: 'none' } : { display: 'flex' }}
+        className="cart-bubble"
+      >
+        <p>{cart.length}</p>
       </div>
       <img className="img-small" src={cartSrc} alt="Shopping Cart" />
     </div>
