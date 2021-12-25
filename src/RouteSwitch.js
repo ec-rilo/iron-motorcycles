@@ -6,8 +6,12 @@ import Bikes from './Pages/Bikes';
 import Contact from './Pages/Contact';
 import Home from './Pages/Home';
 
+if (!localStorage.getItem('cart')) {
+  localStorage.setItem('cart', JSON.stringify([]));
+}
+
 const RouteSwitch = () => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')));
 
   const addToCart = (bike) => {
     const item = {
@@ -20,6 +24,7 @@ const RouteSwitch = () => {
     const newCart = [...cart];
     newCart.push(item);
     setCart(newCart);
+    localStorage.setItem('cart', JSON.stringify(newCart));
   };
 
   return (
