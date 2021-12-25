@@ -5,11 +5,13 @@ import githubSrc from '../images/icons/github-icon.png';
 import linkedinSrc from '../images/icons/linkedin-icon.png';
 import instaSrc from '../images/icons/insta-icon.png';
 
-const Contact = () => {
+const Contact = (props) => {
+  const { cart, addToCart } = props;
+
   const imgPath = `url(${imgSrc})`;
   return (
     <div className="contact-page">
-      <Navbar />
+      <Navbar cart={cart} addToCart={addToCart} />
       <Banner text="Contact Us" imgSrc={imgPath} />
       <div className="contact-content-container">
         <div className="contact-content-block">

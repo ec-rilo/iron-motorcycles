@@ -2,8 +2,7 @@ import closeBtnImg from '../../images/icons/close-btn.png';
 import emptyCartImg from '../../images/cart-grey.png';
 
 const CartPopup = (props) => {
-  const { cartItems } = props;
-
+  const { cart } = props;
   const toggleCartPopupBG = (e) => {
     const fadedBg = document.querySelector('.faded-bg');
     const cartPopup = document.querySelector('.cart-popup-container');
@@ -31,7 +30,7 @@ const CartPopup = (props) => {
             onClick={() => toggleCartPopup()}
           />
           <p className="cart-title">Your Cart</p>
-          {cartItems.length === 0 ? (
+          {cart.length === 0 ? (
             <div className="empty-cart-content">
               <p className="empty-cart-text">Your cart is empty</p>
               <img

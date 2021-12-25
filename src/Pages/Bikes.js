@@ -6,7 +6,9 @@ import ViewCollectionBtn from '../components/buttons/ViewCollectionBtn';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 
-const Bikes = () => {
+const Bikes = (props) => {
+  const { cart, addToCart } = props;
+
   const [checkboxes, setCheckboxes] = useState([
     {
       name: 'Trike',
@@ -99,7 +101,7 @@ const Bikes = () => {
 
   return (
     <div className="bikes-page">
-      <Navbar />
+      <Navbar cart={cart} addToCart={addToCart} />
       <div className="bikes-content">
         <p className="bikes-title">Browse by type</p>
         <div className="slider-container">
