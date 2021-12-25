@@ -400,6 +400,7 @@
     right: -100%;
     transition: right 0.5s;
     z-index: 9999;
+    overflow-y: auto;
   }
 
   .cart-popup-active {
@@ -469,8 +470,88 @@
     margin: auto;
   }
 
+  .cart-popup-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 20px;
+    line-height: normal;
+    overflow-y: auto;
+  }
+
+  .cart-popup-item {
+    display: flex;
+    gap: 10px;
+  }
+
+  .cart-popup-bike-img {
+    height: 150px;
+  }
+
+  .cart-popup-item-content .cart-popup-title {
+    font-family: var(--secondary-fnt);
+    font-size: 1rem;
+  }
+
+  .cart-popup-item-content .cart-popup-name {
+    font-family: var(--primary-fnt);
+  }
+
+  .cart-popup-item-content .cart-popup-price {
+    font-family: var(--primary-fnt);
+  }
+
+  .cart-popup-item-content .cart-popup-qty-container {
+    display: flex;
+    align-items: center;
+    font-family: var(--primary-fnt);
+    margin: 10px 0 10px 0;
+  }
+
+  .cart-popup-qty-container .cart-popup-qty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--primary-clr);
+    margin: 0 10px 0 10px;
+    padding: 0 5px 0 5px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .horizontal-line {
+    background-color: black;
+    height: 2px;
+    margin: 30px 0;
+  }
+
+  .cart-popup-subtotal {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-family: var(--primary-fnt);
+  }
+
+  .subtotal-price .subtotal-title {
+    font-family: var(--secondary-fnt);
+  }
+
+  .subtotal-btn {
+    margin: 20px auto 0 auto;
+  }
+
   /* Cart popup container */
 
+  .orange-btn {
+    display: inline-block;
+    background-color: var(--company-clr);
+    color: var(--secondary-clr);
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px 10px 30px;
+    text-transform: uppercase;
+    font-family: var(--secondary-fnt);
+  }
   .continue-shopping-btn {
     display: flex;
     justify-content: center;
@@ -817,6 +898,7 @@
     right: -100%;
     transition: right 0.5s;
     z-index: 9999;
+    overflow-y: auto;
   }
 
   .cart-popup-active {
@@ -885,7 +967,88 @@
     margin: auto;
   }
 
+  .cart-popup-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 20px;
+    line-height: normal;
+    overflow-y: auto;
+  }
+
+  .cart-popup-item {
+    display: flex;
+    gap: 10px;
+  }
+
+  .cart-popup-bike-img {
+    height: 130px;
+  }
+
+  .cart-popup-item-content .cart-popup-title {
+    font-family: var(--secondary-fnt);
+    font-size: 1rem;
+  }
+
+  .cart-popup-item-content .cart-popup-name {
+    font-family: var(--primary-fnt);
+  }
+
+  .cart-popup-item-content .cart-popup-price {
+    font-family: var(--primary-fnt);
+  }
+
+  .cart-popup-item-content .cart-popup-qty-container {
+    display: flex;
+    align-items: center;
+    font-family: var(--primary-fnt);
+    margin: 10px 0 10px 0;
+  }
+
+  .cart-popup-qty-container .cart-popup-qty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--primary-clr);
+    margin: 0 10px 0 10px;
+    padding: 0 5px 0 5px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .horizontal-line {
+    background-color: black;
+    height: 2px;
+    margin: 30px 0;
+  }
+
+  .cart-popup-subtotal {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-family: var(--primary-fnt);
+  }
+
+  .subtotal-price .subtotal-title {
+    font-family: var(--secondary-fnt);
+  }
+
+  .subtotal-btn {
+    margin: 20px auto 0 auto;
+  }
+
   /* Cart popup container */
+
+  .orange-btn {
+    display: inline-block;
+    background-color: var(--company-clr);
+    color: var(--secondary-clr);
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px 10px 30px;
+    text-transform: uppercase;
+    font-family: var(--secondary-fnt);
+  }
 
   .continue-shopping-btn {
     display: flex;
@@ -1192,7 +1355,7 @@
     flex-direction: column;
     background-color: var(--secondary-clr);
     height: 100%;
-    width: 80%;
+    width: 100%;
     right: -100%;
     transition: right 0.5s;
     z-index: 9999;
@@ -1221,6 +1384,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    overflow-y: auto;
   }
 
   .close-btn {
@@ -1264,7 +1428,87 @@
     margin: auto;
   }
 
+  .cart-popup-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 20px;
+    line-height: normal;
+  }
+
+  .cart-popup-item {
+    display: flex;
+    gap: 10px;
+  }
+
+  .cart-popup-bike-img {
+    height: 100px;
+  }
+
+  .cart-popup-item-content .cart-popup-title {
+    font-family: var(--secondary-fnt);
+    font-size: 1rem;
+  }
+
+  .cart-popup-item-content .cart-popup-name {
+    font-family: var(--primary-fnt);
+  }
+
+  .cart-popup-item-content .cart-popup-price {
+    font-family: var(--primary-fnt);
+  }
+
+  .cart-popup-item-content .cart-popup-qty-container {
+    display: flex;
+    align-items: center;
+    font-family: var(--primary-fnt);
+    margin: 10px 0 10px 0;
+  }
+
+  .cart-popup-qty-container .cart-popup-qty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--primary-clr);
+    margin: 0 10px 0 10px;
+    padding: 0 5px 0 5px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .horizontal-line {
+    background-color: black;
+    height: 2px;
+    margin: 30px 0;
+  }
+
+  .cart-popup-subtotal {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-family: var(--primary-fnt);
+  }
+
+  .subtotal-price .subtotal-title {
+    font-family: var(--secondary-fnt);
+  }
+
+  .subtotal-btn {
+    margin: 20px auto 0 auto;
+  }
+
   /* Cart popup container */
+
+  .orange-btn {
+    display: inline-block;
+    background-color: var(--company-clr);
+    color: var(--secondary-clr);
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px 10px 30px;
+    text-transform: uppercase;
+    font-family: var(--secondary-fnt);
+  }
 
   .continue-shopping-btn {
     display: flex;
@@ -1557,7 +1801,7 @@
     flex-direction: column;
     background-color: var(--secondary-clr);
     height: 100%;
-    width: 80%;
+    width: 100%;
     right: -100%;
     transition: right 0.5s;
     z-index: 9999;
@@ -1629,7 +1873,87 @@
     margin: auto;
   }
 
+  .cart-popup-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 20px;
+    line-height: normal;
+  }
+
+  .cart-popup-item {
+    display: flex;
+    gap: 10px;
+  }
+
+  .cart-popup-bike-img {
+    height: 80px;
+  }
+
+  .cart-popup-item-content .cart-popup-title {
+    font-family: var(--secondary-fnt);
+    font-size: 1rem;
+  }
+
+  .cart-popup-item-content .cart-popup-name {
+    font-family: var(--primary-fnt);
+  }
+
+  .cart-popup-item-content .cart-popup-price {
+    font-family: var(--primary-fnt);
+  }
+
+  .cart-popup-item-content .cart-popup-qty-container {
+    display: flex;
+    align-items: center;
+    font-family: var(--primary-fnt);
+    margin: 10px 0 10px 0;
+  }
+
+  .cart-popup-qty-container .cart-popup-qty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--primary-clr);
+    margin: 0 10px 0 10px;
+    padding: 0 5px 0 5px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .horizontal-line {
+    background-color: black;
+    height: 2px;
+    margin: 30px 0;
+  }
+
+  .cart-popup-subtotal {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-family: var(--primary-fnt);
+  }
+
+  .subtotal-price .subtotal-title {
+    font-family: var(--secondary-fnt);
+  }
+
+  .subtotal-btn {
+    margin: 20px auto 0 auto;
+  }
+
   /* Cart popup container */
+
+  .orange-btn {
+    display: inline-block;
+    background-color: var(--company-clr);
+    color: var(--secondary-clr);
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px 10px 30px;
+    text-transform: uppercase;
+    font-family: var(--secondary-fnt);
+  }
 
   .continue-shopping-btn {
     display: flex;
