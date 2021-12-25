@@ -1,5 +1,6 @@
 import closeBtnImg from '../../images/icons/close-btn.png';
 import emptyCartImg from '../../images/cart-grey.png';
+import uniqid from 'uniqid';
 
 const CartPopup = (props) => {
   const { cart } = props;
@@ -46,8 +47,33 @@ const CartPopup = (props) => {
               </div>
             </div>
           ) : (
-            <p>This appears if there are items in the cart</p>
+            <div className="cart-popup-items-container">
+              {cart.map((bike) => {
+                return (
+                  <div key={uniqid()} className="cart-popup-item">
+                    <img
+                      src={bike.image}
+                      alt={bike.name}
+                      className="cart-popup-bike-img"
+                    />
+                    <div className="cart-popup-item-content">
+                      <p className="cart-popup-title">{bike.type}</p>
+                      <p className="cart-popup-name">{bike.name}</p>
+                      <div className="cart-popup-qty-container">
+                        <p>–</p>
+                        <div className="cart-popup-qty">
+                          <p>2</p>
+                        </div>
+                        <p>+</p>
+                      </div>
+                      <p className="cart-popup-price">{`$${bike.price}.00`}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           )}
+          <div className="horizontal-line"></div>
         </div>
       </div>
     </div>
