@@ -62,11 +62,15 @@ const CartPopup = (props) => {
                         <p className="cart-popup-title">{bike.type}</p>
                         <p className="cart-popup-name">{bike.name}</p>
                         <div className="cart-popup-qty-container">
-                          <p>–</p>
+                          <p className="cart-popup-op cart-popup-increment-op">
+                            –
+                          </p>
                           <div className="cart-popup-qty">
                             <p>2</p>
                           </div>
-                          <p>+</p>
+                          <p className="cart-popup-op cart-popup-decrement-op">
+                            +
+                          </p>
                         </div>
                         <p className="cart-popup-price">{`$${bike.price}.00`}</p>
                       </div>
