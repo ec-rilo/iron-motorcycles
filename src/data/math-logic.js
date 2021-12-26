@@ -31,8 +31,9 @@ function getSubtotal(cart) {
     price = price * bike.qty;
 
     subTotal += price;
-    subTotal = numberWithCommas(subTotal);
   });
+
+  subTotal = numberWithCommas(subTotal);
 
   return subTotal;
 }
