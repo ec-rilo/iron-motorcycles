@@ -4,7 +4,7 @@ import uniqid from 'uniqid';
 import CartPopupSubtotalBtn from '../buttons/CartPopupSubtotalBtn';
 
 const CartPopup = (props) => {
-  const { cart } = props;
+  const { cart, addToCart, removeFromCart } = props;
   const toggleCartPopupBG = (e) => {
     const fadedBg = document.querySelector('.faded-bg');
     const cartPopup = document.querySelector('.cart-popup-container');
@@ -62,13 +62,19 @@ const CartPopup = (props) => {
                         <p className="cart-popup-title">{bike.type}</p>
                         <p className="cart-popup-name">{bike.name}</p>
                         <div className="cart-popup-qty-container">
-                          <p className="cart-popup-op cart-popup-increment-op">
+                          <p
+                            onClick={() => removeFromCart(bike)}
+                            className="cart-popup-op cart-popup-increment-op"
+                          >
                             –
                           </p>
                           <div className="cart-popup-qty">
-                            <p>2</p>
+                            <p>{bike.qty}</p>
                           </div>
-                          <p className="cart-popup-op cart-popup-decrement-op">
+                          <p
+                            onClick={() => addToCart(bike)}
+                            className="cart-popup-op cart-popup-decrement-op"
+                          >
                             +
                           </p>
                         </div>
