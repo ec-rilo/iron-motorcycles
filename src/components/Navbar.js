@@ -3,11 +3,15 @@ import { Link } from 'react-router-dom';
 import CartPopup from './Cart/CartPopup.js';
 
 const Navbar = (props) => {
-  const { cart, addToCart } = props;
+  const { cart, addToCart, removeFromCart } = props;
 
   return (
     <div className="container">
-      <CartPopup cart={cart} addToCart={addToCart} />
+      <CartPopup
+        cart={cart}
+        addToCart={addToCart}
+        removeFromCart={removeFromCart}
+      />
       <nav>
         <Link
           style={{ textDecoration: 'none', color: 'var(--secondary-clr)' }}

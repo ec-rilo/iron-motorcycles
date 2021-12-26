@@ -5,7 +5,7 @@ import { useState } from 'react';
 import uniqid from 'uniqid';
 
 const BikeDetail = (props) => {
-  const { cart, addToCart } = props;
+  const { cart, addToCart, removeFromCart } = props;
   const location = useLocation();
   const { bikeData } = location.state;
   const [bikeSpecs] = useState([
@@ -16,7 +16,11 @@ const BikeDetail = (props) => {
 
   return (
     <div className="bike-detail-container">
-      <Navbar cart={cart} addToCart={addToCart} />
+      <Navbar
+        cart={cart}
+        addToCart={addToCart}
+        removeFromCart={removeFromCart}
+      />
       <div className="bike-detail-upper-content-container">
         <div className="bike-detail-upper-content">
           <div className="bike-detail-info">

@@ -3,10 +3,14 @@ import ShopNowBtn from '../components/buttons/ShopNowBtn';
 import Navbar from '../components/Navbar';
 
 const Home = (props) => {
-  const { cart, addToCart } = props;
+  const { cart, addToCart, removeFromCart } = props;
   return (
     <div className="home-page">
-      <Navbar cart={cart} addToCart={addToCart} />
+      <Navbar
+        cart={cart}
+        addToCart={addToCart}
+        removeFromCart={removeFromCart}
+      />
       <div className="home-background">
         <div className="home-content-container">
           <div className="home-call-to-action-content">
