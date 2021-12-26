@@ -123,6 +123,7 @@ const RouteSwitch = () => {
               cart={cart}
               addToCart={addToCart}
               removeFromCart={removeFromCart}
+              clearCart={clearCart}
             />
           }
         />
