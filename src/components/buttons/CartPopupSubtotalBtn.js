@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { getSubtotal } from '../../data/math-logic';
+import { toggleCartPopup } from '../Cart/cartToggles';
 
 const CartPopupSubtotalBtn = (props) => {
   const { cart } = props;
@@ -18,9 +20,14 @@ const CartPopupSubtotalBtn = (props) => {
         <span className="subtotal-title">Subtotal:</span>{' '}
         {`$${total.toString()}.00`}
       </p>
-      <div className="orange-btn subtotal-btn">
+      <Link
+        to="/yourcart"
+        className="orange-btn subtotal-btn"
+        onClick={() => toggleCartPopup()}
+        style={{ textDecoration: 'none' }}
+      >
         <p>Proceed to Checkout</p>
-      </div>
+      </Link>
     </div>
   );
 };
