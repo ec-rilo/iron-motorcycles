@@ -13,7 +13,7 @@ This app has many features, it comes with:
 
 - A fully responsive website ranging from mobile view to desktop
 - A cart menu where the user can see items they have added to the cart as well as their respective prices,
-item quantity control, and cart subtotal. all items stored in localStorage for data persistence.
+item quantity control, and cart subtotal. All items stored in localStorage for data persistence.
 - Dynamic motorcycle category selection
 - Contact Page
 - Cart checkout page where the user can get a final view of their cart before making a purchase of all items in cart.
