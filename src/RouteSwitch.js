@@ -5,6 +5,7 @@ import Collection from './components/Collection';
 import Bikes from './Pages/Bikes';
 import Contact from './Pages/Contact';
 import Home from './Pages/Home';
+import YourCart from './Pages/YourCart';
 
 if (!localStorage.getItem('cart')) {
   localStorage.setItem('cart', JSON.stringify([]));
@@ -104,6 +105,16 @@ const RouteSwitch = () => {
           path="/bikes/:collection/:bike_detail"
           element={
             <BikeDetail
+              cart={cart}
+              addToCart={addToCart}
+              removeFromCart={removeFromCart}
+            />
+          }
+        />
+        <Route
+          path="/yourcart"
+          element={
+            <YourCart
               cart={cart}
               addToCart={addToCart}
               removeFromCart={removeFromCart}
