@@ -4,7 +4,7 @@ import uniqid from 'uniqid';
 import { useMediaQuery } from 'react-responsive';
 
 const YourCart = (props) => {
-  const { cart, addToCart, removeFromCart } = props;
+  const { cart, addToCart, removeFromCart, clearCart } = props;
 
   const isMobile = useMediaQuery({ query: '(max-width: 750px)' });
 
@@ -91,7 +91,15 @@ const YourCart = (props) => {
             {cart.length === 0 ? '0' : getSubtotal(cart)}.00
           </p>
           <div className="checkout-btn-container">
-            <div className="orange-btn">
+            <div
+              className="orange-btn"
+              onClick={() => {
+                clearCart();
+                alert(
+                  'Thank you for shopping with Iron Motorcycles! Your purchase has been made successfully.'
+                );
+              }}
+            >
               <p>Checkout</p>
             </div>
           </div>
