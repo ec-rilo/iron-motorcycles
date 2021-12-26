@@ -4,7 +4,7 @@ import uniqid from 'uniqid';
 import Navbar from './Navbar';
 
 const Collection = (props) => {
-  const { cart, addToCart } = props;
+  const { cart, addToCart, removeFromCart } = props;
   const location = useLocation();
   const { bikes, data } = location.state;
   const gradient = 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),';
@@ -13,7 +13,11 @@ const Collection = (props) => {
   const coverData = gradient + bgSize + imgSrc;
   return (
     <div className="collection-container">
-      <Navbar cart={cart} addToCart={addToCart} />
+      <Navbar
+        cart={cart}
+        addToCart={addToCart}
+        removeFromCart={removeFromCart}
+      />
       <div className="collection-landing-page">
         <div
           style={{ background: coverData, backgroundSize: 'cover' }}

@@ -6,12 +6,16 @@ import linkedinSrc from '../images/icons/linkedin-icon.png';
 import instaSrc from '../images/icons/insta-icon.png';
 
 const Contact = (props) => {
-  const { cart, addToCart } = props;
+  const { cart, addToCart, removeFromCart } = props;
 
   const imgPath = `url(${imgSrc})`;
   return (
     <div className="contact-page">
-      <Navbar cart={cart} addToCart={addToCart} />
+      <Navbar
+        cart={cart}
+        addToCart={addToCart}
+        removeFromCart={removeFromCart}
+      />
       <Banner text="Contact Us" imgSrc={imgPath} />
       <div className="contact-content-container">
         <div className="contact-content-block">

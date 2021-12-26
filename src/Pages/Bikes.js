@@ -7,7 +7,7 @@ import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 
 const Bikes = (props) => {
-  const { cart, addToCart } = props;
+  const { cart, addToCart, removeFromCart } = props;
 
   const [checkboxes, setCheckboxes] = useState([
     {
@@ -101,7 +101,11 @@ const Bikes = (props) => {
 
   return (
     <div className="bikes-page">
-      <Navbar cart={cart} addToCart={addToCart} />
+      <Navbar
+        cart={cart}
+        addToCart={addToCart}
+        removeFromCart={removeFromCart}
+      />
       <div className="bikes-content">
         <p className="bikes-title">Browse by type</p>
         <div className="slider-container">
