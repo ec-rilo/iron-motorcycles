@@ -58,6 +58,11 @@ const RouteSwitch = () => {
     localStorage.setItem('cart', JSON.stringify(newCart));
   };
 
+  const clearCart = () => {
+    setCart([]);
+    localStorage.setItem('cart', JSON.stringify([]));
+  };
+
   return (
     <BrowserRouter>
       <Routes>
