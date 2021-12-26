@@ -38,6 +38,7 @@ const CartPopupSubtotalBtn = (props) => {
       price = price.replace(',', '');
       price = roundTo(price, 2);
       price = parseFloat(price);
+      price = price * bike.qty;
 
       newTotal += price;
     });
