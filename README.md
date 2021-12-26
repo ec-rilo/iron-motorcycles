@@ -1,70 +1,78 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Iron Motorcycles</h1>
 
-## Available Scripts
+<p align="center" width="100%">
+    <img src="#">
+</p>
 
-In the project directory, you can run:
+<h4 align="center">An e-commerce mock of a fictional Harley Davidson Motorcycle retailer - Iron Motorcycles.</h4>
+<p align="center"> <a href="https://iron-motorcycles.netlify.app/">View Live >></a></p>
 
-### `npm start`
+## Features
+This app has many features, it comes with:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- A fully responsive website ranging from mobile view to desktop
+- A cart menu where the user can see items they have added to the cart as well as their respective prices,
+item quantity control, and cart subtotal.
+- Dynamic motorcycle category selection
+- Contact Page
+- Cart checkout page where the user can get a final view of their cart before making a purchase of all items in cart.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Motivation and Story
+This project was a highly anticipated project of mine - being able to create a nice mock of an e-commerce site that had
+dynamic page creation and item control was the goal for this project. I had lots of practice with react-router as well as
+being exposed to other technologies such as react-scroll, and more react hooks such as useContext. I also ended up using some
+functions from the Math object (as well as using other functions) in order to be able to calculate the subtotal of multiple cart
+items. Lots of practice with commonly used react tech such as useState and passing props was done throughout the project.
 
-### `npm test`
+All components were created using functional components.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Code Styles
+This project follows the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
 
-### `npm run build`
+Eslint and Prettier were also used in this project.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech Stack
+**Built with**
+- [React](https://reactjs.org/)
+- [Prettier](https://prettier.io/)
+- [ESlint](https://eslint.org/)
+- [Babel](https://babeljs.io/)
+- [Webpack](https://webpack.js.org/)
+- [Jest](https://jestjs.io/docs/getting-started)
+- [npm](https://www.npmjs.com/)
+- [react-testing-library](https://testing-library.com/docs/react-testing-library/intro/)
+- [create-react-app](https://create-react-app.dev/)
+- [react-responsive](https://www.npmjs.com/package/react-responsive)
+- [react-scroll](https://www.npmjs.com/package/react-scroll)
+- [uniqid](https://www.npmjs.com/package/uniqid)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Repository Installation
+```
+$ git clone git@github.com:ec-rilo/iron-motorcycles.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tests
+All tests are run using Jest and react-testing-library.
 
-### `npm run eject`
+To install Jest please follow the [Getting Started Page](https://jestjs.io/docs/getting-started) on the
+Jest website.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To install react-testing-library type `npm install --save-dev @testing-library/dom` in the terminal.
+To learn more please read the docs at <a href="https://testing-library.com/docs/react-testing-library/intro/">testing-library.com/react</a>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Please note, if using create-react-app - both Jest and react-testing-library will have been installed for you.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Credits
+I'd like to thank my small community on discord for always supporting my small milestones announcements for this project
+and The Odin Project community on discord for having helped me out with hints and feedback whenever I had questions.
+I can't thank either group enough for the amount of support that has been given to me.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contact
+**Edgar Carrillo**
+</br>
+- [Linkedin](https://www.linkedin.com/in/ecarrillo046/)
+- [Github](https://github.com/ec-rilo)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">Project created by <a href="https://github.com/ec-rilo">Edgar Carrillo</a></p>
