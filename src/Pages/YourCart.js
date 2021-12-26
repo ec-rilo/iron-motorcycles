@@ -1,9 +1,13 @@
 import Navbar from '../components/Navbar';
 import { getSubtotal } from '../data/math-logic';
 import uniqid from 'uniqid';
+import { useMediaQuery } from 'react-responsive';
 
 const YourCart = (props) => {
   const { cart, addToCart, removeFromCart } = props;
+
+  const isMobile = useMediaQuery({ query: '(max-width: 750px)' });
+
   return (
     <div className="your-cart-page">
       <Navbar
@@ -15,39 +19,60 @@ const YourCart = (props) => {
         <div className="your-cart-display">
           <p className="title">Your Cart</p>
           {cart.length === 0 ? (
+            ''
+          ) : (
+            <div className="display-description">
+              <p>Item Description</p>
+              <p>Subtotal</p>
+            </div>
+          )}
+          {cart.length === 0 ? (
             <p className="cart-empty-text">Your cart is empty</p>
           ) : (
             <div className="cart-popup-items-container cart-empty-items-container">
               {cart.map((bike) => {
                 return (
-                  <div key={uniqid()} className="cart-popup-item">
-                    <img
-                      src={bike.image}
-                      alt={bike.name}
-                      className="cart-popup-bike-img"
-                    />
-                    <div className="cart-popup-item-content">
-                      <p className="cart-popup-title">{bike.type}</p>
-                      <p className="cart-popup-name">{bike.name}</p>
-                      <div className="cart-popup-qty-container">
-                        <p
-                          onClick={() => removeFromCart(bike)}
-                          className="cart-popup-op cart-popup-increment-op"
-                        >
-                          –
-                        </p>
-                        <div className="cart-popup-qty">
-                          <p>{bike.qty}</p>
+                  <div className="your-cart-item-container">
+                    <div key={uniqid()} className="cart-popup-item">
+                      <img
+                        src={bike.image}
+                        alt={bike.name}
+                        className="cart-popup-bike-img"
+                      />
+                      <div className="cart-popup-item-content">
+                        <p className="cart-popup-title">{bike.type}</p>
+                        <p className="cart-popup-name">{bike.name}</p>
+                        <div className="cart-popup-qty-container">
+                          <p
+                            onClick={() => removeFromCart(bike)}
+                            className="cart-popup-op cart-popup-increment-op"
+                          >
+                            –
+                          </p>
+                          <div className="cart-popup-qty">
+                            <p>{bike.qty}</p>
+                          </div>
+                          <p
+                            onClick={() => addToCart(bike)}
+                            className="cart-popup-op cart-popup-decrement-op"
+                          >
+                            +
+                          </p>
                         </div>
-                        <p
-                          onClick={() => addToCart(bike)}
-                          className="cart-popup-op cart-popup-decrement-op"
-                        >
-                          +
-                        </p>
+                        {isMobile ? (
+                          <p
+                            style={{ display: 'block' }}
+                            className="cart-popup-price"
+                          >{`$${bike.price}.00`}</p>
+                        ) : (
+                          <p
+                            style={{ display: 'none' }}
+                            className="cart-popup-price"
+                          >{`$${bike.price}.00`}</p>
+                        )}
                       </div>
-                      <p className="cart-popup-price">{`$${bike.price}.00`}</p>
                     </div>
+                    <p className="your-cart-subtotal">${bike.price}.00</p>
                   </div>
                 );
               })}
