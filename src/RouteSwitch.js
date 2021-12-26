@@ -14,15 +14,29 @@ const RouteSwitch = () => {
   const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')));
 
   const addToCart = (bike) => {
+    const newCart = [...cart];
+
     const item = {
       type: bike.type,
       name: bike.name,
       price: bike.price,
       image: bike.image,
+      qty: 1,
     };
 
-    const newCart = [...cart];
-    newCart.push(item);
+    let isNew = true;
+
+    newCart.forEach((currBike) => {
+      if (currBike.type === bike.type && currBike.name === bike.name) {
+        currBike.qty += 1;
+        isNew = false;
+      }
+    });
+
+    if (isNew) {
+      newCart.push(item);
+    }
+
     setCart(newCart);
     localStorage.setItem('cart', JSON.stringify(newCart));
   };
