@@ -32,7 +32,7 @@ const YourCart = (props) => {
             <div className="cart-popup-items-container cart-empty-items-container">
               {cart.map((bike) => {
                 return (
-                  <div className="your-cart-item-container">
+                  <div key={uniqid()} className="your-cart-item-container">
                     <div key={uniqid()} className="cart-popup-item">
                       <img
                         src={bike.image}
