@@ -5,6 +5,7 @@ import './styles/reset.css';
 import './styles/Home.css';
 import './styles/Contact.css';
 import './styles/Bikes.css';
+import './styles/YourCart.css';
 import './styles/components.css';
 import './styles/index.css';
 
