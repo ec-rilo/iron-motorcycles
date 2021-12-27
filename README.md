@@ -27,6 +27,8 @@ items. Lots of practice with commonly used react tech such as useState and passi
 
 All components were created using functional components.
 
+Figma Mock: https://www.figma.com/file/NL6a8wlfEi2rwZ25Cg95ef/Motorcycle-Shop
+
 ## Code Styles
 This project follows the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
 
