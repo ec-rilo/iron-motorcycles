@@ -3,9 +3,11 @@ import emptyCartImg from '../../images/cart-grey.png';
 import uniqid from 'uniqid';
 import CartPopupSubtotalBtn from '../buttons/CartPopupSubtotalBtn';
 import { toggleCartPopup, toggleCartPopupBG } from './cartToggles';
+import { useContext } from 'react';
+import { CartContext } from '../../CartContext';
 
-const CartPopup = (props) => {
-  const { cart, addToCart, removeFromCart } = props;
+const CartPopup = () => {
+  const { cart, addToCart, removeFromCart } = useContext(CartContext);
 
   return (
     <div className="faded-bg" onClick={(e) => toggleCartPopupBG(e)}>
