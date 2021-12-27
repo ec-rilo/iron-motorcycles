@@ -1,7 +1,9 @@
 import cartSrc from '../../images/cart-white.png';
+import { useContext } from 'react';
+import { CartContext } from '../../CartContext';
 
-const Cart = (props) => {
-  const { cart } = props;
+const Cart = () => {
+  const { cart } = useContext(CartContext);
 
   const toggleCartPopup = () => {
     const fadedBg = document.querySelector('.faded-bg');
