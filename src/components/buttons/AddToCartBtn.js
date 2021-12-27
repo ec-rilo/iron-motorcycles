@@ -1,5 +1,9 @@
+import { useContext } from 'react';
+import { CartContext } from '../../CartContext';
+
 const AddToCartBtn = (props) => {
-  const { data, addToCart } = props;
+  const { addToCart } = useContext(CartContext);
+  const { data } = props;
 
   return (
     <div className="add-to-cart-btn" onClick={() => addToCart(data)}>
