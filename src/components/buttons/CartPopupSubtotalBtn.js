@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { getSubtotal } from '../../data/math-logic';
 import { toggleCartPopup } from '../Cart/cartToggles';
+import { CartContext } from '../../CartContext';
 
-const CartPopupSubtotalBtn = (props) => {
-  const { cart } = props;
-
+const CartPopupSubtotalBtn = () => {
+  const { cart } = useContext(CartContext);
   const [total, setTotal] = useState(0.0);
 
   useEffect(() => {
