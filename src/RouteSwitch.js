@@ -6,129 +6,25 @@ import Bikes from './Pages/Bikes';
 import Contact from './Pages/Contact';
 import Home from './Pages/Home';
 import YourCart from './Pages/YourCart';
-
-if (!localStorage.getItem('cart')) {
-  localStorage.setItem('cart', JSON.stringify([]));
-}
+import { CartProvider } from './CartContext';
 
 const RouteSwitch = () => {
-  const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')));
-
-  const addToCart = (bike) => {
-    const newCart = [...cart];
-
-    const item = {
-      type: bike.type,
-      name: bike.name,
-      price: bike.price,
-      image: bike.image,
-      qty: 1,
-    };
-
-    let isNew = true;
-
-    newCart.forEach((currBike) => {
-      if (currBike.type === bike.type && currBike.name === bike.name) {
-        currBike.qty += 1;
-        isNew = false;
-      }
-    });
-
-    if (isNew) {
-      newCart.push(item);
-    }
-
-    setCart(newCart);
-    localStorage.setItem('cart', JSON.stringify(newCart));
-  };
-
-  const removeFromCart = (bike) => {
-    const newCart = [...cart];
-
-    newCart.forEach((currBike, index) => {
-      if (currBike.type === bike.type && currBike.name === bike.name) {
-        currBike.qty -= 1;
-        if (currBike.qty === 0) {
-          newCart.splice(index, 1);
-        }
-      }
-    });
-
-    setCart(newCart);
-    localStorage.setItem('cart', JSON.stringify(newCart));
-  };
-
-  const clearCart = () => {
-    setCart([]);
-    localStorage.setItem('cart', JSON.stringify([]));
-  };
-
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              cart={cart}
-              addToCart={addToCart}
-              removeFromCart={removeFromCart}
-            />
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <Contact
-              cart={cart}
-              addToCart={addToCart}
-              removeFromCart={removeFromCart}
-            />
-          }
-        />
-        <Route
-          path="/bikes"
-          element={
-            <Bikes
-              cart={cart}
-              addToCart={addToCart}
-              removeFromCart={removeFromCart}
-            />
-          }
-        />
-        <Route
-          path="/bikes/:collection"
-          element={
-            <Collection
-              cart={cart}
-              addToCart={addToCart}
-              removeFromCart={removeFromCart}
-            />
-          }
-        />
-        <Route
-          path="/bikes/:collection/:bike_detail"
-          element={
-            <BikeDetail
-              cart={cart}
-              addToCart={addToCart}
-              removeFromCart={removeFromCart}
-            />
-          }
-        />
-        <Route
-          path="/yourcart"
-          element={
-            <YourCart
-              cart={cart}
-              addToCart={addToCart}
-              removeFromCart={removeFromCart}
-              clearCart={clearCart}
-            />
-          }
-        />
-      </Routes>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/bikes" element={<Bikes />} />
+          <Route path="/bikes/:collection" element={<Collection />} />
+          <Route
+            path="/bikes/:collection/:bike_detail"
+            element={<BikeDetail />}
+          />
+          <Route path="/yourcart" element={<YourCart />} />
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
   );
 };
 

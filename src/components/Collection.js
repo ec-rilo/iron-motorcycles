@@ -3,8 +3,7 @@ import { Link as HashLink } from 'react-scroll';
 import uniqid from 'uniqid';
 import Navbar from './Navbar';
 
-const Collection = (props) => {
-  const { cart, addToCart, removeFromCart } = props;
+const Collection = () => {
   const location = useLocation();
   const { bikes, data } = location.state;
   const gradient = 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),';
@@ -13,11 +12,7 @@ const Collection = (props) => {
   const coverData = gradient + bgSize + imgSrc;
   return (
     <div className="collection-container">
-      <Navbar
-        cart={cart}
-        addToCart={addToCart}
-        removeFromCart={removeFromCart}
-      />
+      <Navbar />
       <div className="collection-landing-page">
         <div
           style={{ background: coverData, backgroundSize: 'cover' }}

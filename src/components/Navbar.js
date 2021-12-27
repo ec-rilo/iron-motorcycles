@@ -2,16 +2,10 @@ import Cart from './Cart/Cart.js';
 import { Link } from 'react-router-dom';
 import CartPopup from './Cart/CartPopup.js';
 
-const Navbar = (props) => {
-  const { cart, addToCart, removeFromCart } = props;
-
+const Navbar = () => {
   return (
     <div className="container">
-      <CartPopup
-        cart={cart}
-        addToCart={addToCart}
-        removeFromCart={removeFromCart}
-      />
+      <CartPopup />
       <nav>
         <Link
           style={{ textDecoration: 'none', color: 'var(--secondary-clr)' }}
@@ -45,7 +39,7 @@ const Navbar = (props) => {
             </Link>
           </li>
           <li>
-            <Cart cart={cart} addToCart={addToCart} />
+            <Cart />
           </li>
         </ul>
       </nav>

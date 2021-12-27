@@ -4,8 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import uniqid from 'uniqid';
 
-const BikeDetail = (props) => {
-  const { cart, addToCart, removeFromCart } = props;
+const BikeDetail = () => {
   const location = useLocation();
   const { bikeData } = location.state;
   const [bikeSpecs] = useState([
@@ -16,11 +15,7 @@ const BikeDetail = (props) => {
 
   return (
     <div className="bike-detail-container">
-      <Navbar
-        cart={cart}
-        addToCart={addToCart}
-        removeFromCart={removeFromCart}
-      />
+      <Navbar />
       <div className="bike-detail-upper-content-container">
         <div className="bike-detail-upper-content">
           <div className="bike-detail-info">
@@ -44,12 +39,12 @@ const BikeDetail = (props) => {
           <img className="bike-detail-img" src={bikeData.image} alt="asef" />
         </div>
         <div className="bike-detail-upper-content-lower-contaier">
-          <AddToCartBtn data={bikeData} addToCart={addToCart} />
+          <AddToCartBtn data={bikeData} />
         </div>
       </div>
 
       <div className="bike-detail-lower-content">
-        <AddToCartBtn data={bikeData} addToCart={addToCart} />
+        <AddToCartBtn data={bikeData} />
         <p className="bike-detail-text">
           {bikeData.description}
           <br />

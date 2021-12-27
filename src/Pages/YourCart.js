@@ -2,19 +2,18 @@ import Navbar from '../components/Navbar';
 import { getSubtotal } from '../data/math-logic';
 import uniqid from 'uniqid';
 import { useMediaQuery } from 'react-responsive';
+import { useContext } from 'react';
+import { CartContext } from '../CartContext';
 
-const YourCart = (props) => {
-  const { cart, addToCart, removeFromCart, clearCart } = props;
+const YourCart = () => {
+  const { cart, addToCart, removeFromCart, clearCart } =
+    useContext(CartContext);
 
   const isMobile = useMediaQuery({ query: '(max-width: 750px)' });
 
   return (
     <div className="your-cart-page">
-      <Navbar
-        cart={cart}
-        addToCart={addToCart}
-        removeFromCart={removeFromCart}
-      />
+      <Navbar />
       <div className="your-cart-content">
         <div className="your-cart-display">
           <p className="title">Your Cart</p>
